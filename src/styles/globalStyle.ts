@@ -20,11 +20,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        color: #f1f1f1;
+        color: ${themeStyles.dirtyWhite};
     }
 
     a, li {
         text-decoration: none;
+        color: ${themeStyles.dirtyWhite};
     }
 
     ul {

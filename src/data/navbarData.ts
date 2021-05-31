@@ -3,7 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 export interface INavItem {
     id: string
     title: string,
-    subTitle: string,
+    subTitleOne: string,
+    subTitleTwo: string,
     index: string,
 }
 
@@ -12,25 +13,29 @@ export const generateNavbarData:() => INavItem[] = () => {
         {
             id: uuidv4(),
             title: "About",
-            subTitle: "A bit of an introduction",
+            subTitleOne: "A bit of an",
+            subTitleTwo: "introduction",
             index: "01"
         },
         {
             id: uuidv4(),
             title: "Works",
-            subTitle: "A quick show-and-tell",
+            subTitleOne: "A quick",
+            subTitleTwo: "show-and-tell",
             index: "02"
         },
         {
             id: uuidv4(),
             title: "Contact",
-            subTitle: "Write a short message to me",
+            subTitleOne: "A short",
+            subTitleTwo: "message to me",
             index: "03"
         },
         {
             id: uuidv4(),
             title: "Resume",
-            subTitle: "A brief professional summary",
+            subTitleOne: "A professional",
+            subTitleTwo: "summary",
             index: "04"
         },
     ]

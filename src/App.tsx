@@ -19,16 +19,17 @@ function App() {
 	const [activeNav, setActiveNav] = useState(navbarData[0]);
 
 	return (
-		<StyledApp className="app"> 
-			<GlobalStyle />
-			<div className="wrapper">
+		<div className="wrapper">
+			<StyledApp className="app"> 
+				<GlobalStyle />
 				<Navbar 
 					navbarData={navbarData} 
 					activeNav={activeNav}
 					setActiveNav={setActiveNav}>
 				</Navbar>
-			</div>
-		</StyledApp>
+			</StyledApp>
+		</div>
+		
 	);
 }
 
@@ -36,7 +37,7 @@ export default App;
 
 const StyledApp = styled.div`
 	min-height: 100vh;
-
-	
+	width: 90%;
+	margin: auto;
 `;	
  

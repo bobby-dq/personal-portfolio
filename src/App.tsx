@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Packages
+import { useState } from 'react';
+import { INavItem, generateNavbarData } from './data/navbarData';
+import styled from 'styled-components';
+
+// Components
+import { Navbar } from './components/Navbar';
+
+// Styles
+import { GlobalStyle } from './styles/globalStyle';
+
+// Images
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// Data
+	const navbarData:INavItem[] = generateNavbarData();
+
+	// States
+	const [activeNav, setActiveNav] = useState(navbarData[0]);
+
+	return (
+		<StyledApp className="app"> 
+			<GlobalStyle />
+			<div className="wrapper">
+				<Navbar 
+					navbarData={navbarData} 
+					activeNav={activeNav}
+					setActiveNav={setActiveNav}>
+				</Navbar>
+			</div>
+		</StyledApp>
+	);
 }
 
 export default App;
+
+const StyledApp = styled.div`
+	min-height: 100vh;
+
+	
+`;	
+ 

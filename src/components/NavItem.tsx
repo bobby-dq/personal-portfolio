@@ -24,8 +24,10 @@ export const NavItem: FunctionComponent<INavItemComponent> = (props) => {
 } 
 
 const StyledNavItem = styled.div`
-    margin-left: 4rem;
+    margin-left: 5rem;
     font-family: ${theme.montserrat};
+    font-size: ${theme.smallText};
+    width: 10rem;
 
     p {
         padding-top: 1rem;

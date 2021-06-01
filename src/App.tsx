@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 // Components
 import { Navbar } from './components/Navbar';
+import { Slider } from './components/Slider';
+import { SlidingMenu } from './components/SlidingMenu';
 
 // Styles
 import { GlobalStyle } from './styles/globalStyle';
@@ -16,18 +18,36 @@ function App() {
 	const navbarData:INavItem[] = generateNavbarData();
 
 	// States
-	const [activeNav, setActiveNav] = useState(navbarData[0]);
+	const [activeNavItem, setActiveNavItem] = useState(navbarData[0]);
+	const [openSlider, setOpenSlider] = useState(false);
 
 	return (
 		<div className="wrapper">
-			<StyledApp className="app"> 
-				<GlobalStyle />
+			<GlobalStyle />
+			<Slider
+					activeNavItem={activeNavItem}
+					openSlider={openSlider}
+					setOpenSlider={setOpenSlider}>
+			</Slider>
+			<StyledApp> 
 				<Navbar 
 					navbarData={navbarData} 
-					activeNav={activeNav}
-					setActiveNav={setActiveNav}>
+					activeNavItem={activeNavItem}
+					setActiveNavItem={setActiveNavItem}
+					openSlider={openSlider}
+					setOpenSlider={setOpenSlider}>
 				</Navbar>
 			</StyledApp>
+			<div className={`sliding-menu ${openSlider ? 'open-sliding-menu': ''}`}>
+				<SlidingMenu
+					navbarData={navbarData} 
+					activeNavItem={activeNavItem}
+					setActiveNavItem={setActiveNavItem}
+					openSlider={openSlider}
+					setOpenSlider={setOpenSlider}>
+				</SlidingMenu>
+			</div>
+			
 		</div>
 		
 	);
@@ -37,7 +57,9 @@ export default App;
 
 const StyledApp = styled.div`
 	min-height: 100vh;
-	width: 90%;
-	margin: auto;
+	padding: 0rem 10rem 0rem 10rem;
+	position: relative;
 `;	
+
+
  

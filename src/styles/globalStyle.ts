@@ -2,11 +2,13 @@ import { createGlobalStyle, keyframes } from 'styled-components';
 import noisetexture from '../images/background/noise-texture.png';
 
 export const themeStyles = {
-    grayBackground: "#1b1b1b",
+    darkGray: "#1b1b1b",
     dirtyWhite: "#f1f1f1",
     lightGray: "#b1b1b1",
-    pageHeader: "8rem",
-    text: "1.5rem",
+    pageHeader: "12rem",
+    subHeader: "6.4rem",
+    text: "2.4rem",
+    smallText: "1.2rem",
     allura: "'Allura', cursive",
     montserrat: "'Montserrat', sans-serif",
     playfair: "'Playfair Display', serif",
@@ -21,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
     html {
         color: ${themeStyles.dirtyWhite};
+        font-size: 62.5%;
     }
 
     a, li {
@@ -35,10 +38,21 @@ export const GlobalStyle = createGlobalStyle`
 
     // noisy background
     .wrapper {
-		min-height: 100vh;
 		width: 100%;
-		overflow: hidden;
 		background: #1b1b1b;
+
+        .sliding-menu {
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            left: -100%;
+            transition: transform 0.33s ease-in-out;
+        }
+
+        .open-sliding-menu {
+            transform: translateX(100%);
+        }
+
 	}
 
 	.wrapper:after {

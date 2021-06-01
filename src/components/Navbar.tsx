@@ -11,9 +11,11 @@ import { StyledLine } from '../styles/reuseStyle';
 import { NavItem } from './NavItem';
 
 interface INavbar {
+    openSlider: boolean,
+    setOpenSlider: React.Dispatch<React.SetStateAction<boolean>>,
     navbarData: INavItem[],
-    activeNav: INavItem,
-    setActiveNav: React.Dispatch<React.SetStateAction<INavItem>>
+    activeNavItem: INavItem,
+    setActiveNavItem: React.Dispatch<React.SetStateAction<INavItem>>
 }
 
 export const Navbar: FunctionComponent<INavbar> = (p) => {
@@ -22,8 +24,7 @@ export const Navbar: FunctionComponent<INavbar> = (p) => {
         <StyledNavbar>
             <a href="#" className="logo-wrapper">
                 <StyledLine></StyledLine>
-                <p>Bobby <br /> Quilacio</p>
-                <p className="index">00</p>
+                <h1>Bobby <br /> Quilacio</h1>
             </a>  
             <ul className="nav-item-wrapper">
                 {p.navbarData.map(i =>
@@ -41,17 +42,10 @@ const StyledNavbar = styled.div`
 
     .logo-wrapper {
         font-family: ${theme.playfair};
-        font-size: ${theme.text};
         font-weight: bold;
-        
-        p {
+        h1 {
             padding-top: 1rem;
-        }
-
-        .index {
-            font-size: 1rem;
-            font-family: ${theme.playfair};
-            font-weight: bold;
+            font-size: ${theme.text};
         }
     }
 

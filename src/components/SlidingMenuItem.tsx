@@ -45,7 +45,7 @@ const StyledSlidingMenuItem = styled.div`
     flex-direction: column;
     font-family: ${theme.montserrat};
     font-size: ${theme.text};
-    padding: 2rem 5rem 0rem 10rem;
+    padding: 2rem 5rem 0rem 0rem;
 
     .item {
         color: ${theme.darkGray};

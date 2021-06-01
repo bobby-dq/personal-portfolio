@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
         color: ${themeStyles.dirtyWhite};
         font-size: 62.5%;
+        overflow-x: hidden;
     }
 
     a, li {
@@ -40,6 +41,7 @@ export const GlobalStyle = createGlobalStyle`
     .wrapper {
 		width: 100%;
 		background: #1b1b1b;
+        overflow-x: hidden;
 
         .sliding-menu {
             width: 100%;
@@ -47,6 +49,7 @@ export const GlobalStyle = createGlobalStyle`
             top: 0%;
             left: -100%;
             transition: transform 0.33s ease-in-out;
+            overflow-x: hidden;
         }
 
         .open-sliding-menu {

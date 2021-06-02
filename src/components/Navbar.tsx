@@ -2,6 +2,7 @@
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
+import { Link } from 'react-router-dom';
 
 // Styles
 import { themeStyles as theme} from '../styles/globalStyle';
@@ -22,13 +23,20 @@ export const Navbar: FunctionComponent<INavbar> = (p) => {
 
     return (
         <StyledNavbar>
-            <a href="#" className="logo-wrapper">
+            <Link to="/" className="logo-wrapper">
                 <StyledLine></StyledLine>
                 <h1>Bobby <br /> Quilacio</h1>
-            </a>  
+            </Link>  
             <ul className="nav-item-wrapper">
                 {p.navbarData.map(i =>
-                    <li><a href="#"><NavItem navItem={i}/></a></li>
+                    <li><Link to={`${i.url}`}>
+                        <NavItem 
+                            key={i.id} 
+                            navItem={i} 
+                            setActiveNavItem={p.setActiveNavItem} 
+                            activeNavItem={p.activeNavItem}
+                        />
+                    </Link></li>
                 )}
             </ul>
         </StyledNavbar>

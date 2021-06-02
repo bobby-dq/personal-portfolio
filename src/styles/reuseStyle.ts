@@ -6,3 +6,7 @@ export const StyledLine = styled.div`
     width: 100%;
     background: ${theme.dirtyWhite};
 `;
+
+export const componentBorder = styled.div`
+    
+`;

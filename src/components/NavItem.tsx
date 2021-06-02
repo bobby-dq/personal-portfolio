@@ -8,17 +8,19 @@ import { themeStyles as theme } from '../styles/globalStyle';
 import { StyledLine } from '../styles/reuseStyle';
 
 interface INavItemComponent {
-    navItem: INavItem;
+    navItem: INavItem,
+    activeNavItem: INavItem,
+    setActiveNavItem: React.Dispatch<React.SetStateAction<INavItem>>
 }
 
-export const NavItem: FunctionComponent<INavItemComponent> = (props) => {
+export const NavItem: FunctionComponent<INavItemComponent> = (p) => {
 
     return (
-        <StyledNavItem>
+        <StyledNavItem onClick={() => p.setActiveNavItem(p.navItem)}>
             <StyledLine></StyledLine>
-            <p className="nav-item-title">{props.navItem.title}</p>
-            <p>{props.navItem.subTitleOne} <br/> {props.navItem.subTitleTwo}</p>
-            <p className="nav-item-index">{props.navItem.index}</p>
+            <p className="nav-item-title">{p.navItem.title}</p>
+            <p>{p.navItem.subTitleOne} <br/> {p.navItem.subTitleTwo}</p>
+            <p className="nav-item-index">{p.navItem.index}</p>
         </StyledNavItem>
     );
 } 

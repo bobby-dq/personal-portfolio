@@ -1,13 +1,13 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { INavItem } from '../data/navbarData';
 
 // Components
 import { SlidingMenuItem } from '../components/SlidingMenuItem'
 import { Github, Discord } from '@styled-icons/bootstrap/'
 import { Linkedin } from '@styled-icons/entypo-social';
 import { Email } from '@styled-icons/material-sharp/';
+import { INavItem } from '../data/navbarData';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
@@ -32,16 +32,16 @@ export const SlidingMenu: FunctionComponent<ISlidingMenu> = (p) => {
                     <SlidingMenuItem
                         setOpenSlider={p.setOpenSlider}
                         activeNavItem={p.activeNavItem}
+                        openSlider={p.openSlider}
                         setActiveNavItem={p.setActiveNavItem}
                         navItem={i}>    
                     </SlidingMenuItem>
                 )}
             </div>
             <div className="socials-wrapper">
-                <a className="social-link" href="#"><Github size="3rem" color="black"></Github></a>
-                <a className="social-link" href="#"><Discord size="3rem" color="black"></Discord></a>
-                <a className="social-link" href="#"><Linkedin size="3rem" color="black"></Linkedin></a>
-                <a className="social-link" href="#"><Email size="3rem" color="black"></Email></a>
+                <a className="social-link" target="_blank" rel="noreferrer" href="https://github.com/bobby-dq"><Github size="3rem" color="black"></Github></a>
+                <a className="social-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/bob-joshua-quilacio/"><Linkedin size="3rem" color="black"></Linkedin></a>
+                <a className="social-link" href="mailto: josh.quilacio@gmail.com"><Email size="3rem" color="black"></Email></a>
             </div>
             
         </StyledSlidingMenu>

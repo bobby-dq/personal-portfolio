@@ -1,6 +1,11 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+
+// Components
 import { INavItem } from '../data/navbarData';
 
 // Styles
@@ -9,17 +14,19 @@ import { StyledLine as line } from '../styles/reuseStyle';
 
 interface ISlidingMenuItem {
     setOpenSlider: React.Dispatch<React.SetStateAction<boolean>>,
+    openSlider: boolean,
     activeNavItem: INavItem,
     setActiveNavItem: React.Dispatch<React.SetStateAction<INavItem>>
     navItem: INavItem,
 }
 
 export const SlidingMenuItem: FunctionComponent<ISlidingMenuItem> = (p) => {
+    const url = useLocation().pathname;
 
     return (
-        <StyledSlidingMenuItem>
+        <StyledSlidingMenuItem onClick={() => {p.setOpenSlider(!p.openSlider); p.setActiveNavItem(p.navItem)}} >
             <StyledLine></StyledLine>
-            <a href="#" className="item">
+            <Link to={`${p.navItem.url}`} className="item" style={{background: `${url === p.navItem.url ? 'rgba(255, 0, 0, 0.10)': ''}`}}>
                 <div className="image-wrapper">
                     <img src={p.navItem.icon} alt={p.navItem.title} />
                     <div className="index-wrapper">
@@ -34,7 +41,7 @@ export const SlidingMenuItem: FunctionComponent<ISlidingMenuItem> = (p) => {
                         <p>{p.navItem.subTitleOne} {p.navItem.subTitleTwo}</p>
                     </div>
                 </div>
-            </a>
+            </Link>
         </StyledSlidingMenuItem>
     );
 }

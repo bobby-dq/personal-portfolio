@@ -13,6 +13,7 @@ export interface INavItem {
     index: string,
     icon: string,
     chapter: string,
+    url: string,
 }
 
 export const generateNavbarData:() => INavItem[] = () => {
@@ -24,7 +25,8 @@ export const generateNavbarData:() => INavItem[] = () => {
             subTitleTwo: "context",
             index: "00",
             icon: prologueIcon,
-            chapter:"Prologue"
+            chapter:"Prologue",
+            url: "/"
         },
         {
             id: uuidv4(),
@@ -33,7 +35,8 @@ export const generateNavbarData:() => INavItem[] = () => {
             subTitleTwo: "introduction",
             index: "01",
             icon: aboutIcon,
-            chapter:"Chapter 01"
+            chapter:"Chapter 01",
+            url: "/about"
         },
         {
             id: uuidv4(),
@@ -42,7 +45,8 @@ export const generateNavbarData:() => INavItem[] = () => {
             subTitleTwo: "show-and-tell",
             index: "02",
             icon: worksIcon,
-            chapter:"Chapter 02"
+            chapter:"Chapter 02",
+            url: "/works"
         },
         {
             id: uuidv4(),
@@ -51,7 +55,8 @@ export const generateNavbarData:() => INavItem[] = () => {
             subTitleTwo: "message to me",
             index: "03",
             icon: contactIcon,
-            chapter:"Chapter 03"
+            chapter:"Chapter 03",
+            url: "/contact"
         },
         {
             id: uuidv4(),
@@ -60,7 +65,8 @@ export const generateNavbarData:() => INavItem[] = () => {
             subTitleTwo: "summary",
             chapter: "Epilogue",
             index: "04",
-            icon: resumeIcon
+            icon: resumeIcon,
+            url: "resume"
         },
     ]
 }

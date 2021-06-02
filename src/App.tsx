@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { INavItem, generateNavbarData } from './data/navbarData';
 import styled from 'styled-components';
+import { AnimatePresence } from 'framer-motion';
+import { useLocation, Switch, Route } from 'react-router-dom';
 
 // Components
 import { Navbar } from './components/Navbar';
@@ -11,11 +13,17 @@ import { SlidingMenu } from './components/SlidingMenu';
 // Styles
 import { GlobalStyle } from './styles/globalStyle';
 
-// Images
+// Pages
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import { OpeningPage } from './pages/OpeningPage';
+import { ResumePage } from './pages/ResumePage';
+import { WorksPage } from './pages/WorksPage';
 
 function App() {
 	// Data
 	const navbarData:INavItem[] = generateNavbarData();
+	const location = useLocation();
 
 	// States
 	const [activeNavItem, setActiveNavItem] = useState(navbarData[0]);
@@ -29,6 +37,7 @@ function App() {
 					openSlider={openSlider}
 					setOpenSlider={setOpenSlider}>
 			</Slider>
+			
 			<StyledApp> 
 				<Navbar 
 					navbarData={navbarData} 
@@ -37,6 +46,16 @@ function App() {
 					openSlider={openSlider}
 					setOpenSlider={setOpenSlider}>
 				</Navbar>
+				<AnimatePresence exitBeforeEnter>
+					<Switch location={location} key={location.pathname}>
+						<Route exact path="/" component={OpeningPage}/>
+						<Route exact path="/about" component={AboutPage}/>
+						<Route exact path="/works" component={WorksPage}/>
+						<Route exact path="/contact" component={ContactPage}/>
+						<Route exact path="/resume" component={ResumePage}/>
+					</Switch>
+				</AnimatePresence>
+
 			</StyledApp>
 			<div className={`sliding-menu ${openSlider ? 'open-sliding-menu': ''}`}>
 				<SlidingMenu

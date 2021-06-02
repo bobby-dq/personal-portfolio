@@ -62,7 +62,7 @@ const StyledSlidingMenu = styled.div`
     }
 
     .socials-wrapper {
-        margin-top: 5rem;
+        margin: 5rem 0rem;
         padding-left: 10rem;
         display: flex;
         justify-content: flex-start

@@ -73,7 +73,7 @@ const StyledSlidingMenuItem = styled.div`
             height: 100%;
             margin-right: 2rem;
             img {
-                width: 5rem
+                width: 10rem
             }
         }
 

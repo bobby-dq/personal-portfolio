@@ -26,7 +26,7 @@ export const NavItem: FunctionComponent<INavItemComponent> = (p) => {
 } 
 
 const StyledNavItem = styled.div`
-    margin-left: 5rem;
+    margin-left: 2rem;
     font-family: ${theme.montserrat};
     font-size: ${theme.smallText};
     width: 10rem;

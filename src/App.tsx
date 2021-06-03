@@ -48,7 +48,14 @@ function App() {
 				</Navbar>
 				<AnimatePresence exitBeforeEnter>
 					<Switch location={location} key={location.pathname}>
-						<Route exact path="/" component={OpeningPage}/>
+						<Route exact path="/" 
+							component={ () => 
+								<OpeningPage  
+									activeNavItem={navbarData[0]}
+									setActiveNavItem={setActiveNavItem}
+									nextNavItem={navbarData[1]}
+								/>}
+						/>
 						<Route exact path="/about" component={AboutPage}/>
 						<Route exact path="/works" component={WorksPage}/>
 						<Route exact path="/contact" component={ContactPage}/>

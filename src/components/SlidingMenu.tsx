@@ -51,7 +51,7 @@ export const SlidingMenu: FunctionComponent<ISlidingMenu> = (p) => {
 const StyledSlidingMenu = styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
     background: ${theme.dirtyWhite};
 
     .item-wrapper {

@@ -29,11 +29,12 @@ export const SlidingMenuItem: FunctionComponent<ISlidingMenuItem> = (p) => {
             <Link to={`${p.navItem.url}`} className="item" style={{background: `${url === p.navItem.url ? 'rgba(255, 0, 0, 0.10)': ''}`}}>
                 <div className="image-wrapper">
                     <img src={p.navItem.icon} alt={p.navItem.title} />
-                    <div className="index-wrapper">
-                        <p>{p.navItem.index}</p>
-                    </div>
+                    
                 </div>
                 <div className="text-wrapper"> 
+                    <div className="index-wrapper">
+                            <p>{p.navItem.index}</p>
+                    </div>
                     <div className="title">
                         <p>{p.navItem.title}</p>
                     </div>
@@ -52,7 +53,7 @@ const StyledSlidingMenuItem = styled.div`
     flex-direction: column;
     font-family: ${theme.montserrat};
     font-size: ${theme.text};
-    padding: 2rem 5rem 0rem 0rem;
+    padding: 1rem 5rem 0rem 0rem;
 
     .item {
         color: ${theme.darkGray};
@@ -63,6 +64,7 @@ const StyledSlidingMenuItem = styled.div`
         padding: 1rem 1rem;
         transition: all 0.33s ease;
         z-index: 1;
+
 
         &:hover {
             color: ${theme.dirtyWhite};
@@ -88,10 +90,8 @@ const StyledSlidingMenuItem = styled.div`
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
+            justify-content: flex-start;
             margin-left: 2rem;
-            flex-wrap: wrap;
-            
 
             .title {
                 font-size: 3.6rem;

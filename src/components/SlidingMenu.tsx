@@ -53,6 +53,8 @@ const StyledSlidingMenu = styled.div`
     flex-direction: column;
     height: 100%;
     background: ${theme.dirtyWhite};
+    position: sticky;
+    top: 0px;
 
     .item-wrapper {
         padding-left: 10rem;

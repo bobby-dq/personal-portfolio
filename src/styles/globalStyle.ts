@@ -43,16 +43,17 @@ export const GlobalStyle = createGlobalStyle`
 		background: #1b1b1b;
         overflow-x: hidden;
         height: 100%;
+        position: relative;
 
         .sliding-menu {
             width: 100%;
-            position: absolute;
+            position: fixed;
+            height: 100%;
             top: 0%;
             bottom: 0%;
             left: -100%;
             transition: transform 0.33s ease-in-out;
             overflow-x: hidden;
-            min-height: 200vh;
         }
 
         .open-sliding-menu {

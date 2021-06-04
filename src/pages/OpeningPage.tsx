@@ -6,6 +6,7 @@ import { INavItem } from '../data/navbarData';
 // Components
 import { Hero } from '../components/Hero';
 import { Prologue } from '../components/Prologue';
+import { NextPage } from '../components/NextPage';
 
 interface IOpeningPage {
     activeNavItem: INavItem,
@@ -19,6 +20,7 @@ export const OpeningPage: FunctionComponent<IOpeningPage> = (p) => {
         <div>
             <Hero></Hero>
             <Prologue activeNavItem={p.activeNavItem}></Prologue>
+            <NextPage setActiveNavItem={p.setActiveNavItem} nextNavItem={p.nextNavItem}/>
         </div>
     );
 }

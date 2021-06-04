@@ -1,9 +1,9 @@
 // Packages
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { INavItem, generateNavbarData } from './data/navbarData';
 import styled from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
-import { useLocation, Switch, Route } from 'react-router-dom';
+import { useLocation, Switch, Route, useHistory } from 'react-router-dom';
 
 // Components
 import { Navbar } from './components/Navbar';
@@ -24,10 +24,18 @@ function App() {
 	// Data
 	const navbarData:INavItem[] = generateNavbarData();
 	const location = useLocation();
+	const url = useHistory().location.pathname;
 
 	// States
 	const [activeNavItem, setActiveNavItem] = useState(navbarData[0]);
 	const [openSlider, setOpenSlider] = useState(false);
+
+	// Effect
+	useEffect(() => {
+		const currentPage = navbarData.filter((page) => page.url === url);
+		setActiveNavItem(currentPage[0]);
+	},[url]);
+	
 
 	return (
 		<div className="wrapper">
@@ -49,14 +57,19 @@ function App() {
 				<AnimatePresence exitBeforeEnter>
 					<Switch location={location} key={location.pathname}>
 						<Route exact path="/" 
-							component={ () => 
-								<OpeningPage  
-									activeNavItem={navbarData[0]}
-									setActiveNavItem={setActiveNavItem}
-									nextNavItem={navbarData[1]}
-								/>}
+							component={ () => <OpeningPage  
+								activeNavItem={activeNavItem}
+								setActiveNavItem={setActiveNavItem}
+								nextNavItem={navbarData[1]}
+							/>}
 						/>
-						<Route exact path="/about" component={AboutPage}/>
+						<Route exact path="/about" 
+							component={ () => <AboutPage 
+								activeNavItem={activeNavItem}
+								setActiveNavItem={setActiveNavItem}
+								nextNavItem={navbarData[2]}
+							/>}
+						/>
 						<Route exact path="/works" component={WorksPage}/>
 						<Route exact path="/contact" component={ContactPage}/>
 						<Route exact path="/resume" component={ResumePage}/>

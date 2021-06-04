@@ -66,7 +66,7 @@ export const generateNavbarData:() => INavItem[] = () => {
             chapter: "Epilogue",
             index: "04",
             icon: resumeIcon,
-            url: "resume"
+            url: "/resume"
         },
     ]
 }

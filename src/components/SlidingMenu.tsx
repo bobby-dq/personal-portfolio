@@ -3,8 +3,8 @@ import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
 // Components
-import { SlidingMenuItem } from '../components/SlidingMenuItem'
-import { Github, Discord } from '@styled-icons/bootstrap/'
+import { SlidingMenuItem } from '../components/SlidingMenuItem';
+import { Github } from '@styled-icons/bootstrap/';
 import { Linkedin } from '@styled-icons/entypo-social';
 import { Email } from '@styled-icons/material-sharp/';
 import { INavItem } from '../data/navbarData';

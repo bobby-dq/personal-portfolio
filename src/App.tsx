@@ -70,7 +70,13 @@ function App() {
 								nextNavItem={navbarData[2]}
 							/>}
 						/>
-						<Route exact path="/works" component={WorksPage}/>
+						<Route exact path="/works" 
+							component={ () => <WorksPage 
+								activeNavItem={activeNavItem}
+								setActiveNavItem={setActiveNavItem}
+								nextNavItem={navbarData[3]}
+							/>}
+						/>
 						<Route exact path="/contact" component={ContactPage}/>
 						<Route exact path="/resume" component={ResumePage}/>
 					</Switch>

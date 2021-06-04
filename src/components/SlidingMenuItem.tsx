@@ -82,7 +82,7 @@ const StyledSlidingMenuItem = styled.div`
             height: 100%;
             margin-right: 2rem;
             img {
-                width: 10rem
+                width: 7.5rem
             }
         }
 
@@ -94,7 +94,7 @@ const StyledSlidingMenuItem = styled.div`
             margin-left: 2rem;
 
             .title {
-                font-size: 3.6rem;
+                font-size: ${theme.text};
                 font-weight: bold;
             }
             .subtitle {

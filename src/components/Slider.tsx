@@ -98,7 +98,7 @@ const StyledSlider = styled.div`
         text-orientation: sideways;
         transform: rotate(-180deg);
         font-family: ${theme.montserrat};
-        font-size: ${theme.text};
+        font-size: ${theme.smallText};
         height: 33.33%;
 
         .title {

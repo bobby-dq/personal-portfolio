@@ -25,7 +25,7 @@ export const PageIndicator: FunctionComponent<IPageIndicator> = (p) => {
     )
 }
 
-const StyledPageIndicator = styled.div`
+const StyledPageIndicator = styled.div` 
     flex: 1 1 33.33%;
     h1 {
             font-size: ${theme.text};
@@ -39,7 +39,7 @@ const StyledPageIndicator = styled.div`
         margin-top: 3rem;
         width: 100%;
         img {
-            width: 10rem;
+            width: 20rem;
         }
     }
 `;

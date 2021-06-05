@@ -26,5 +26,5 @@ export const OpeningPage: FunctionComponent<IOpeningPage> = (p) => {
 }
 
 const StyledOpeningPage = styled.div`
-    padding-bottom: 10rem;
+    padding: 10rem 0rem;
 `;

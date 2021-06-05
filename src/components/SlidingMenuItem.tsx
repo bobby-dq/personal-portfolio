@@ -60,7 +60,6 @@ const StyledSlidingMenuItem = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin: 1rem 1rem;
         padding: 1rem 1rem;
         transition: all 0.33s ease;
         z-index: 1;

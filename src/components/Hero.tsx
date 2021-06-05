@@ -13,7 +13,7 @@ export const Hero: FunctionComponent = () => {
     return (
         <StyledHero>
             <div className="text-wrapper">
-                <div className="text text1"><p>Hello my name is,</p></div>
+                <div className="text text1"><p>Hello my name is</p></div>
                 <div className="text text2"><h1>Bobby Quilacio</h1></div>
                 <div className="text text3"><p>and I am a</p></div>
                 <div className="text text4"><h1>Full-Stack Developer</h1></div>

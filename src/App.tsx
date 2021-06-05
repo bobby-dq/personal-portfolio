@@ -126,6 +126,10 @@ const StyledApp = styled.div`
 	min-height: 100vh;
 	padding: 0rem 10rem 0rem 10rem;
 	position: relative;
+
+	@media (max-width: 900px) {
+		padding: 0rem 2rem 0rem 7rem;
+	}
 `;	
 
 

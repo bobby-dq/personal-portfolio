@@ -25,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
         color: ${themeStyles.dirtyWhite};
         font-size: 62.5%;
         overflow-x: hidden;
+
+        @media (max-width: 900px) {
+            font-size: 50%;
+        }
     }
 
     a, li {

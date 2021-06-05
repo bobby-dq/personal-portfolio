@@ -9,6 +9,7 @@ import { useLocation, Switch, Route, useHistory } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Slider } from './components/Slider';
 import { SlidingMenu } from './components/SlidingMenu';
+import { ScrollTop } from './components/ScrollTop';
 
 // Styles
 import { GlobalStyle } from './styles/globalStyle';
@@ -21,6 +22,13 @@ import { ResumePage } from './pages/ResumePage';
 import { WorksPage } from './pages/WorksPage';
 
 function App() {
+	// Scroll to top
+	window.onload = function () {
+        setTimeout(function() {
+            window.scrollTo(0,0);
+        } , 1)
+    }
+	
 	// Data
 	const navbarData:INavItem[] = generateNavbarData();
 	const location = useLocation();
@@ -35,6 +43,7 @@ function App() {
 		const currentPage = navbarData.filter((page) => page.url === url);
 		setActiveNavItem(currentPage[0]);
 	},[url]);
+
 	
 
 	return (
@@ -77,7 +86,13 @@ function App() {
 								nextNavItem={navbarData[3]}
 							/>}
 						/>
-						<Route exact path="/contact" component={ContactPage}/>
+						<Route exact path="/contact" 
+							component={ () => <ContactPage 
+								activeNavItem={activeNavItem}
+								setActiveNavItem={setActiveNavItem}
+								nextNavItem={navbarData[4]}
+							/>}
+						/>
 						<Route exact path="/resume" component={ResumePage}/>
 					</Switch>
 				</AnimatePresence>
@@ -92,6 +107,7 @@ function App() {
 					setOpenSlider={setOpenSlider}>
 				</SlidingMenu>
 			</div>
+			<ScrollTop/>
 			
 		</div>
 		

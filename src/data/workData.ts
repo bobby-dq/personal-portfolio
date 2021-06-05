@@ -2,15 +2,15 @@
 import { v4 as uuidv4 } from 'uuid';
 
 // Images
-import aspBudgeting from '../images/workImages/asp-budgeting.png';
-import babyTracker from '../images/workImages/babytracker.png';
-import bonterraBuilt from '../images/workImages/bonterra-built.png';
-import djangoBudgeting from '../images/workImages/django-budgeting.png';
-import himo from '../images/workImages/himo.png';
-import moebiusPlotter from '../images/workImages/moebius-plotter.png';
-import moonCake from '../images/workImages/mooncake.png';
-import personalPortfolio from '../images/workImages/personal-portfolio.png';
-import sudokuBacktracker from '../images/workImages/sudoku-backtracker.png';
+import aspBudgeting from '../images/workImages/asp-budgeting.jpg';
+import babyTracker from '../images/workImages/babytracker.jpg';
+import bonterraBuilt from '../images/workImages/bonterra-built.jpg';
+import djangoBudgeting from '../images/workImages/django-budgeting.jpg';
+import himo from '../images/workImages/himo.jpg';
+import moebiusPlotter from '../images/workImages/moebius-plotter.jpg';
+import moonCake from '../images/workImages/mooncake.jpg';
+import personalPortfolio from '../images/workImages/personal-portfolio.jpg';
+import sudokuBacktracker from '../images/workImages/sudoku-backtracker.jpg';
 
 export interface IWork {
     id: string,

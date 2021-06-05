@@ -2,6 +2,7 @@
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
+import { useLocation } from 'react-router-dom';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
@@ -14,13 +15,17 @@ interface INavItemComponent {
 }
 
 export const NavItem: FunctionComponent<INavItemComponent> = (p) => {
+    const url = useLocation().pathname;
 
     return (
-        <StyledNavItem onClick={() => p.setActiveNavItem(p.navItem)}>
+        <StyledNavItem onClick={() => p.setActiveNavItem(p.navItem)} >
             <StyledLine></StyledLine>
-            <p className="nav-item-title">{p.navItem.title}</p>
-            <p>{p.navItem.subTitleOne} <br/> {p.navItem.subTitleTwo}</p>
-            <p className="nav-item-index">{p.navItem.index}</p>
+            <div className={`${url === p.navItem.url ? 'active' : ''}`}>
+                <p className="nav-item-title">{p.navItem.title}</p>
+                <p>{p.navItem.subTitleOne} <br/> {p.navItem.subTitleTwo}</p>
+                <p className="nav-item-index">{p.navItem.index}</p>
+            </div>
+            
         </StyledNavItem>
     );
 } 
@@ -42,5 +47,9 @@ const StyledNavItem = styled.div`
     .nav-item-index {
         font-family: ${theme.playfair};
         font-weight: bold;
+    }
+
+    .active {
+        color: rgb(255, 0, 0);
     }
 `;

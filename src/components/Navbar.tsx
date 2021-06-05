@@ -29,7 +29,7 @@ export const Navbar: FunctionComponent<INavbar> = (p) => {
             </Link>  
             <ul className="nav-item-wrapper">
                 {p.navbarData.map(i =>
-                    <li><Link to={`${i.url}`}>
+                    <li ><Link to={`${i.url}`}>
                         <NavItem 
                             key={i.id} 
                             navItem={i} 

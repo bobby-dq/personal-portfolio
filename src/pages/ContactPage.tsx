@@ -8,6 +8,7 @@ import { themeStyles as theme } from '../styles/globalStyle';
 
 // Components
 import { NextPage } from '../components/NextPage';
+import { ChapterThree } from '../components/ChapterThree';
 
 interface IContactPage {
     activeNavItem: INavItem,
@@ -19,6 +20,7 @@ export const ContactPage: FunctionComponent<IContactPage> = (p) => {
 
     return (
         <StyledContactPage>
+            <ChapterThree activeNavItem={p.activeNavItem}/>
             <NextPage nextNavItem={p.nextNavItem} setActiveNavItem={p.setActiveNavItem} />
         </StyledContactPage>
     );

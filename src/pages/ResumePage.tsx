@@ -1,10 +1,13 @@
+// Packages
 import { FunctionComponent } from 'react';
+import { Link } from 'react-router-dom';
+import resume from '../data/BobbyQuilacioResume.pdf';
 
 export const ResumePage: FunctionComponent = () => {
 
     return (
         <div>
-            <h1>Resume</h1>
+            <Link to={resume} target="_blank" download="BobbyQuilacioResume.pdf">Download</Link>
         </div>
     );
 }

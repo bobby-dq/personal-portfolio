@@ -74,6 +74,18 @@ const StyledSlidingMenu = styled.div`
         margin-right: 2rem;
     }
 
+    @media (max-width: 650px) {
+        padding-top: 6rem;
+
+        .socials-wrapper {
+            padding-left: 2rem;
+        }
+
+        .item-wrapper {
+            padding-left: 2rem;
+        }
+    }
+
 
 
     

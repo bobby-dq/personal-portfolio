@@ -130,6 +130,10 @@ const StyledApp = styled.div`
 	@media (max-width: 900px) {
 		padding: 0rem 2rem 0rem 7rem;
 	}
+
+	@media (max-width: 650px) {
+		padding: 0rem 2rem 0rem 2rem;
+	}
 `;	
 
 

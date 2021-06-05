@@ -110,8 +110,13 @@ const StyledSlidingMenuItem = styled.div`
             height: 100%;
         }
 
-        
+        @media (max-height: 600px) {
+            .title, .index-wrapper {
+                font-size: ${theme.smallText}
+            }
+        }
     }
+
 `;
 
 const StyledLine = styled(line)`

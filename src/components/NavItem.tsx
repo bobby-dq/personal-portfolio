@@ -22,7 +22,8 @@ export const NavItem: FunctionComponent<INavItemComponent> = (p) => {
             <StyledLine></StyledLine>
             <div className={`${url === p.navItem.url ? 'active' : ''}`}>
                 <p className="nav-item-title">{p.navItem.title}</p>
-                <p>{p.navItem.subTitleOne} <br/> {p.navItem.subTitleTwo}</p>
+                <p>{p.navItem.subTitleOne}</p>
+                <p>{p.navItem.subTitleTwo}</p>
                 <p className="nav-item-index">{p.navItem.index}</p>
             </div>
             
@@ -36,17 +37,16 @@ const StyledNavItem = styled.div`
     font-size: ${theme.smallText};
     width: 10rem;
 
-    p {
-        padding-top: 1rem;
-    }
-
     .nav-item-title {
         font-weight: bold;
+        padding: 0.5rem 0rem 1rem 0rem;
     }
 
     .nav-item-index {
         font-family: ${theme.playfair};
         font-weight: bold;
+        padding-top: 1rem;
+        
     }
 
     .active {

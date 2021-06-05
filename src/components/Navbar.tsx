@@ -60,4 +60,14 @@ const StyledNavbar = styled.div`
     .nav-item-wrapper {
         display: flex;
     }
+
+    @media (max-width: 650px) {
+        .nav-item-wrapper {
+            display: none;
+        }
+
+        .logo-wrapper {
+            padding-top: 6rem;
+        }
+    }
 `;

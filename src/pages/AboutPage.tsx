@@ -26,4 +26,8 @@ export const AboutPage: FunctionComponent<IAboutPage> = (p) => {
 
 const StyledAboutPage = styled.div`
     padding: 10rem 0rem;
+
+    @media (max-width: 650px) {
+        padding: 2rem 0rem;
+    }
 `;

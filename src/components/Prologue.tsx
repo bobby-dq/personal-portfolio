@@ -83,4 +83,8 @@ const StyledPrologue = styled.div`
 
         }
     }
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+    }
 `;

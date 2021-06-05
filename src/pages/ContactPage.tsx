@@ -28,4 +28,8 @@ export const ContactPage: FunctionComponent<IContactPage> = (p) => {
 
 const StyledContactPage = styled.div`
     padding: 10rem 0rem;
+
+    @media (max-width: 650px) {
+        padding: 2rem 0rem;
+    }
 `;

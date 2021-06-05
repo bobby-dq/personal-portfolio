@@ -25,4 +25,8 @@ export const ResumePage: FunctionComponent<IResumePage> = (p) => {
 
 const StyledResumePage = styled.div`
     padding: 10rem 0rem;
+
+    @media (max-width: 650px) {
+        padding: 2rem 0rem;
+    }
 `;

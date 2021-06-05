@@ -47,4 +47,8 @@ const StyledChapterTwo = styled.div`
         display: flex;
         flex-direction: column;
     }
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+    }
 `;

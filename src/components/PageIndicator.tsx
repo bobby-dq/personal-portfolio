@@ -18,8 +18,11 @@ export const PageIndicator: FunctionComponent<IPageIndicator> = (p) => {
             <div className="image-wrapper">
                 <img src={p.activeNavItem.icon} alt={p.activeNavItem.title} />
             </div>
-            <h1>{p.activeNavItem.chapter}</h1>
-            <p>{p.activeNavItem.subTitleOne}<br/>{p.activeNavItem.subTitleTwo}</p>
+            <div className="text-wrapper">
+                <h1>{p.activeNavItem.chapter}</h1>
+                <p>{p.activeNavItem.subTitleOne} {p.activeNavItem.subTitleTwo}</p>
+            </div>
+            
         </StyledPageIndicator>
         
     )
@@ -27,20 +30,41 @@ export const PageIndicator: FunctionComponent<IPageIndicator> = (p) => {
 
 const StyledPageIndicator = styled.div` 
     flex: 1 1 33.33%;
-    h1 {
+
+    .text-wrapper {
+       h1 {
             font-size: ${theme.text};
             font-family: ${theme.playfair};
+        }
+        p {
+            padding-top: 1rem;
+            font-family: ${theme.montserrat};
+        } 
     }
-    p {
-        padding-top: 1rem;
-    }
+    
 
     .image-wrapper {
         margin-top: 3rem;
-        width: 100%;
+        width: fit-content;
         img {
             width: 20rem;
         }
     }
 
+    @media (max-width: 650px) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 5rem;
+
+        .text-wrapper {
+            padding-left: 3rem;
+        }
+
+        .image-wrapper {
+            img {
+                width: 10rem;
+            }
+        }
+    }
 `;

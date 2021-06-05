@@ -50,4 +50,14 @@ const StyledHero = styled.div`
     .text3 {
         margin-top: 2.4rem;
     }
+
+    @media (max-width: 650px) {
+        min-height: 50vh;
+        align-items: flex-start;
+        .text-wrapper {
+            width: 100%;
+        }
+
+        
+    }
 `;

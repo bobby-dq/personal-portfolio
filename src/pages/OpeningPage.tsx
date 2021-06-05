@@ -27,4 +27,8 @@ export const OpeningPage: FunctionComponent<IOpeningPage> = (p) => {
 
 const StyledOpeningPage = styled.div`
     padding: 10rem 0rem;
+
+    @media (max-width: 650px) {
+        padding: 10rem 0rem 10rem 0rem; 
+    }
 `;

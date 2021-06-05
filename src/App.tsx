@@ -93,7 +93,13 @@ function App() {
 								nextNavItem={navbarData[4]}
 							/>}
 						/>
-						<Route exact path="/resume" component={ResumePage}/>
+						<Route exact path="/resume" 
+							component={ () => <ResumePage 
+								activeNavItem={activeNavItem}
+								nextNavItem={navbarData[0]}
+								setActiveNavItem={setActiveNavItem}
+							/>}
+						/>
 					</Switch>
 				</AnimatePresence>
 

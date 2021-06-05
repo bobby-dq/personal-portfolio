@@ -26,11 +26,6 @@ export const WorkItem: FunctionComponent<IWorkItem> = (p) => {
         <StyledWorkItem layout>
             <motion.div className="title" layout>
                 <h1>{p.workItem.title}</h1>
-                <div className="expand" onClick={() => {setShowPhoto(!showPhoto)}}>
-                    <p >
-                        {!showPhoto ? <p>Show Photo <ChevronDown color={theme.lightGray} size="3rem"/></p> : <p>Hide Photo <ChevronUp color={theme.lightGray} size="3rem"/></p> }
-                    </p>
-                </div>
             </motion.div>
             <motion.div className="details" layout>
                 <motion.p layout>{p.workItem.description}</motion.p>
@@ -44,11 +39,15 @@ export const WorkItem: FunctionComponent<IWorkItem> = (p) => {
             <motion.div className="links" layout>
                 <div className="external">
                     {p.workItem.liveUrl && <a className="live-url" href={p.workItem.liveUrl} target="_blank" rel="noreferrer">
-                        <LinkExternal color={theme.dirtyWhite} size="3rem" />
+                        <LinkExternal color="rgba(255, 0, 0, 1)" size="3rem" />
                     </a>}
                     {p.workItem.githubRepo && <a className="github-repo" href={p.workItem.githubRepo} target="_blank" rel="noreferrer">
-                        <Github color={theme.dirtyWhite} size="3rem" />
+                        <Github color="rgba(255, 0, 0, 1)" size="3rem" />
                     </a>}
+                </div>
+                
+                <div className="expand" onClick={() => {setShowPhoto(!showPhoto)}}>   
+                    {!showPhoto ? <p>Show Photo <ChevronDown color="rgba(255, 0, 0, 1)" size="3rem"/></p> : <p>Hide Photo <ChevronUp color="rgba(255, 0, 0, 1)" size="3rem"/></p> }
                 </div>
                 
             </motion.div>
@@ -75,7 +74,7 @@ const StyledWorkItem = styled(motion.div)`
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        cursor: n-resize;
+        cursor: n-resize; 
     }
 
     .image-wrapper {

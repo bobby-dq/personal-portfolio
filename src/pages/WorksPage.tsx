@@ -24,5 +24,5 @@ export const WorksPage: FunctionComponent<IWorksPage> = (p) => {
 }
 
 const StyledWorksPage = styled.div`
-    padding-top: 10rem;
+    padding: 10rem 0rem;
 `;

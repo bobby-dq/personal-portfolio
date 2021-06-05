@@ -42,4 +42,5 @@ const StyledPageIndicator = styled.div`
             width: 20rem;
         }
     }
+
 `;

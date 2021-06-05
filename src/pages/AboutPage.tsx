@@ -25,5 +25,5 @@ export const AboutPage: FunctionComponent<IAboutPage> = (p) => {
 };
 
 const StyledAboutPage = styled.div`
-    padding-top: 10rem;
+    padding: 10rem 0rem;
 `;

@@ -1,13 +1,28 @@
 // Packages
 import { FunctionComponent } from 'react';
-import { Link } from 'react-router-dom';
-import resume from '../data/BobbyQuilacioResume.pdf';
+import styled from 'styled-components';
+import { INavItem }  from '../data/navbarData';
 
-export const ResumePage: FunctionComponent = () => {
+// Components
+import { Epilogue } from '../components/Epilogue';
+import { NextPage } from '../components/NextPage';
+
+interface IResumePage {
+    activeNavItem: INavItem,
+    nextNavItem: INavItem,
+    setActiveNavItem: React.Dispatch<React.SetStateAction<INavItem>>,
+}
+
+export const ResumePage: FunctionComponent<IResumePage> = (p) => {
 
     return (
-        <div>
-            <Link to={resume} target="_blank" download="BobbyQuilacioResume.pdf">Download</Link>
-        </div>
+        <StyledResumePage>
+            <Epilogue activeNavItem={p.activeNavItem}/>
+            <NextPage nextNavItem={p.nextNavItem} setActiveNavItem={p.setActiveNavItem} />
+        </StyledResumePage>
     );
 }
+
+const StyledResumePage = styled.div`
+    padding: 10rem 0rem;
+`;

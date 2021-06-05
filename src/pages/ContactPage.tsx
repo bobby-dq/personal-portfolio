@@ -27,5 +27,5 @@ export const ContactPage: FunctionComponent<IContactPage> = (p) => {
 }
 
 const StyledContactPage = styled.div`
-    padding-top: 10rem;
+    padding: 10rem 0rem;
 `;

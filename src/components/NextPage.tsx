@@ -49,6 +49,12 @@ const StyledNextPage = styled.div`
         display: flex;
         flex-direction: column;
 
+        transition: all 0.33s ease;
+
+        &:hover {
+            color: rgba(255, 0, 0, 1);
+        }
+
         h1 {
             font-size: ${theme.subHeader};
             font-weight: 400;
@@ -63,4 +69,5 @@ const StyledNextPage = styled.div`
         }
 
     }
+    
 `;

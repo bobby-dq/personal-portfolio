@@ -17,10 +17,14 @@ interface IOpeningPage {
 export const OpeningPage: FunctionComponent<IOpeningPage> = (p) => {
 
     return (
-        <div>
+        <StyledOpeningPage>
             <Hero></Hero>
             <Prologue activeNavItem={p.activeNavItem}></Prologue>
             <NextPage setActiveNavItem={p.setActiveNavItem} nextNavItem={p.nextNavItem}/>
-        </div>
+        </StyledOpeningPage>
     );
 }
+
+const StyledOpeningPage = styled.div`
+    padding-bottom: 10rem;
+`;

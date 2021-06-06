@@ -20,6 +20,7 @@ interface INextPage {
 
 export const NextPage: FunctionComponent<INextPage> = (p) => {
     return (
+        
         <StyledNextPage>
             <PageIndicator activeNavItem={p.nextNavItem}></PageIndicator>
             <div className="text-wrapper">
@@ -51,13 +52,13 @@ const StyledNextPage = styled.div`
 
         transition: all 0.33s ease;
 
-        &:hover {
-            color: rgba(255, 0, 0, 1);
-        }
-
         h1 {
             font-size: ${theme.subHeader};
             font-weight: 400;
+            transition: all 0.33s ease;             
+            &:hover {
+                color: rgba(255, 0, 0, 1);
+            }
         }
 
         p {
@@ -71,7 +72,7 @@ const StyledNextPage = styled.div`
     }
 
     @media (max-width: 650px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     
 `;

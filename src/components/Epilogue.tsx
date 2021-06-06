@@ -27,8 +27,8 @@ export const Epilogue: FunctionComponent<IEpilogue> = (p) => {
             <div className="content-wrapper">
                 <PageHeader title={p.activeNavItem.title}></PageHeader>
                 <div className="body">
-                    <p>You have reached the end. Thank you very much for taking the time checking out my portfolio. Clicking
-                    the following link will provide you a copy of my professional resume. Again, thank you very much!</p>
+                    <p>You have reached the end. Thank you very much for taking the time checking out my portfolio. Click
+                    the link to grab a copy of my professional resume. Again, thank you very much!</p>
                     <Link to={resume} target="_blank" download="BobbyQuilacioResume.pdf">Download</Link>
                 </div>
             </div>
@@ -38,7 +38,7 @@ export const Epilogue: FunctionComponent<IEpilogue> = (p) => {
 
 const StyledEpilogue = styled.div`
     display: flex;
-    min-height: 75vh;
+    min-height: 50vh;
     font-family: ${theme.montserrat};
     font-size: ${theme.text};
 

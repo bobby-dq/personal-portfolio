@@ -28,14 +28,8 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
                 </p>
                 <p>
                     This portfolio is meant to be navigated like a book 
-                    and this page serves as the prologue, and each 
-                    chapter will expand  according to its title. However 
-                    you’ll quickly find out that contents within each chapter 
-                    are not laid-out like a traditional book.
-                </p>
-                <p>
-                    That being said, feel free to skip ahead, each chapter are
-                    independent of each other, so click any of the links in the side bar or nav-bar. Here are links to other chapters:
+                    but feel free to skip ahead, each chapter are
+                    independent of each other, so click any of the links in the side bar or nav-bar. Here are links to other chapters too:
                 </p>
                 <ul>
                     <li><Link to="/about">+ Chapter 01: About</Link></li>
@@ -43,7 +37,6 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
                     <li><Link to="/contact">+ Chapter 03: Contact</Link></li>
                     <li><Link to="/resume">+ Epilogue: Resume</Link></li>
                 </ul>
-                <p>I don't want to babble too much, so enjoy.</p>
                 <h1>Bobby Quilacio</h1>
             </div>
         </StyledPrologue>

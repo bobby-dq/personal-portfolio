@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react';
 import { INavItem, generateNavbarData } from './data/navbarData';
 import styled from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
-import { useLocation, Switch, Route, useHistory } from 'react-router-dom';
+import { useLocation, Switch, Route, useHistory, Redirect } from 'react-router-dom';
 
 // Components
 import { Navbar } from './components/Navbar';
 import { Slider } from './components/Slider';
 import { SlidingMenu } from './components/SlidingMenu';
 import { ScrollTop } from './components/ScrollTop';
+import { Footer } from './components/Footer';	
 
 // Styles
 import { GlobalStyle } from './styles/globalStyle';
@@ -100,9 +101,12 @@ function App() {
 								setActiveNavItem={setActiveNavItem}
 							/>}
 						/>
+						<Redirect from="*" to="/" 
+							
+						/>
 					</Switch>
 				</AnimatePresence>
-
+				<Footer></Footer>
 			</StyledApp>
 			<div className={`sliding-menu ${openSlider ? 'open-sliding-menu': ''}`}>
 				<SlidingMenu

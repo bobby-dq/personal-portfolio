@@ -35,6 +35,7 @@ const StyledPageIndicator = styled.div`
        h1 {
             font-size: ${theme.text};
             font-family: ${theme.playfair};
+            word-wrap: break-word;
         }
         p {
             padding-top: 1rem;

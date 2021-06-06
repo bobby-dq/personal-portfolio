@@ -22,6 +22,7 @@ export const PageHeader: FunctionComponent<IPageHeader> = (p) => {
 
 const StyledPageHeader = styled.div`
     h1 {
+        word-wrap: break-word;
         font-family: ${theme.playfair};
         font-size: ${theme.pageHeader};
     }

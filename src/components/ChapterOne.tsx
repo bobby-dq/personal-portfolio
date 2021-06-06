@@ -26,13 +26,9 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
                     <PageHeader title={p.activeNavItem.title} />
                     <p>Hi, my name is Bobby Quilacio and I am a full-stack developer.
                     I started my web development journey on May 2020 with 
-                    Python and  created a couple projects with Django.</p>
-                    <p>I then moved on to learning C# and the .NET ecosystem, while 
-                    at the same time developing my abilities in HTML and CSS. Having
-                    learned ASP.NET Core MVC and Razor Pages, I wanted to expand
-                    my web development skill so I went ahead and learnt
-                    Typescript and React to better my front-end.</p>
-                    <p>I started taking on freelance projects (which are showcased
+                    Python / Django.</p>
+                    <p>I then moved on to working with  C# / ASP.NET and Typescript / React. 
+                    I also started taking on freelance projects (which are showcased
                     in the next chapter, alongside personal projects) 
                     to gain a better grasp of web development. </p>
                     <p>Outside of web development, I live a somewhat mediocre lifestyle

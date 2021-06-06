@@ -88,7 +88,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "MoonCake",
-            description: "The website (prototype stage) of MoonCake - a local bakery. This website is built using CSS, HTML, SASS, and Javascript.",
+            description: "The website (prototype stage) of MoonCake - a local bakery. This static website is built using CSS, HTML, SASS, and Javascript.",
             liveUrl: "http://moon-cake.s3-website.ca-central-1.amazonaws.com/",
             technologies: ["HTML", "CSS", "SASS", "JavaScript"],
             photo: moonCake
@@ -96,7 +96,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Bonterra Built",
-            description: "The website (prototype stage) of Bonterra Built - a local custom home builder. This website is built using CSS, HTML, SASS, and Javascript.",
+            description: "The website (prototype stage) of Bonterra Built - a local custom home builder. This static website is built using CSS, HTML, SASS, and Javascript.",
             liveUrl: "http://bonterra-built.s3-website.ca-central-1.amazonaws.com/",
             technologies: ["HTML", "CSS", "SASS", "JavaScript"],
             photo: bonterraBuilt

@@ -16,6 +16,20 @@ export interface INavItem {
     url: string,
 }
 
+export const generateNotFoundData: () => INavItem = () => {
+    const notFoundData: INavItem = {
+        id: uuidv4(),
+        title: "Not Found",
+        subTitleOne: "You might be",
+        subTitleTwo: "a little lost",
+        index: "404",
+        icon: prologueIcon,
+        chapter: "Lost Chapter",
+        url: "/Error404"
+    }
+    return notFoundData;
+}
+
 export const generateNavbarData:() => INavItem[] = () => {
     return [
         {

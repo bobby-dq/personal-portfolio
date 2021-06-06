@@ -1,6 +1,6 @@
 // Packages
 import { useState, useEffect } from 'react';
-import { INavItem, generateNavbarData } from './data/navbarData';
+import { INavItem, generateNavbarData, generateNotFoundData } from './data/navbarData';
 import styled from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
 import { useLocation, Switch, Route, useHistory, Redirect } from 'react-router-dom';
@@ -21,6 +21,7 @@ import { ContactPage } from './pages/ContactPage';
 import { OpeningPage } from './pages/OpeningPage';
 import { ResumePage } from './pages/ResumePage';
 import { WorksPage } from './pages/WorksPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
 	// Scroll to top
@@ -31,7 +32,8 @@ function App() {
     }
 	
 	// Data
-	const navbarData:INavItem[] = generateNavbarData();
+	const navbarData: INavItem[] = generateNavbarData();
+	const notFoundData: INavItem = generateNotFoundData();
 	const location = useLocation();
 	const url = useHistory().location.pathname;
 
@@ -41,8 +43,11 @@ function App() {
 
 	// Effect
 	useEffect(() => {
-		const currentPage = navbarData.filter((page) => page.url === url);
-		setActiveNavItem(currentPage[0]);
+		let currentPage = navbarData.filter((page) => page.url === url)[0];
+		if (currentPage === undefined) {
+			currentPage = notFoundData;
+		}
+		setActiveNavItem(currentPage);
 	},[url]);
 
 	
@@ -51,9 +56,9 @@ function App() {
 		<div className="wrapper">
 			<GlobalStyle />
 			<Slider
-					activeNavItem={activeNavItem}
-					openSlider={openSlider}
-					setOpenSlider={setOpenSlider}>
+				activeNavItem={activeNavItem}
+				openSlider={openSlider}
+				setOpenSlider={setOpenSlider}>
 			</Slider>
 			
 			<StyledApp> 
@@ -66,6 +71,7 @@ function App() {
 				</Navbar>
 				<AnimatePresence exitBeforeEnter>
 					<Switch location={location} key={location.pathname}>
+							
 						<Route exact path="/" 
 							component={ () => <OpeningPage  
 								activeNavItem={activeNavItem}
@@ -101,9 +107,10 @@ function App() {
 								setActiveNavItem={setActiveNavItem}
 							/>}
 						/>
-						<Redirect from="*" to="/" 
-							
+						<Route exact path="/Error404" 
+							component={ () => <NotFoundPage activeNavItem={activeNavItem}/>}
 						/>
+						<Redirect from="*" to="/Error404"/>
 					</Switch>
 				</AnimatePresence>
 				<Footer></Footer>

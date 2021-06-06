@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
-import { StyledLine } from '../styles/reuseStyle';
-
 // Images
 import logo from '../images/icons/logo-solid.png'
 

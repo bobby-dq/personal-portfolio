@@ -20,7 +20,7 @@ interface IWorkItem {
 
 export const WorkItem: FunctionComponent<IWorkItem> = (p) => {
 
-    const [showPhoto, setShowPhoto] = useState(false);
+    const [showPhoto, setShowPhoto] = useState(true);
 
     return (
         <StyledWorkItem layout>

@@ -11,6 +11,7 @@ import { Slider } from './components/Slider';
 import { SlidingMenu } from './components/SlidingMenu';
 import { ScrollTop } from './components/ScrollTop';
 import { Footer } from './components/Footer';	
+import { LoadingScreen } from './components/LoadingScreen';
 
 // Styles
 import { GlobalStyle } from './styles/globalStyle';
@@ -55,6 +56,7 @@ function App() {
 	return (
 		<div className="wrapper">
 			<GlobalStyle />
+			<LoadingScreen />
 			<Slider
 				activeNavItem={activeNavItem}
 				openSlider={openSlider}

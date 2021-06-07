@@ -25,7 +25,7 @@ import { WorksPage } from './pages/WorksPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
-	// Scroll to top
+	// // Scroll to top
 	window.onload = function () {
         setTimeout(function() {
             window.scrollTo(0,0);
@@ -56,7 +56,7 @@ function App() {
 	return (
 		<div className="wrapper">
 			<GlobalStyle />
-			<LoadingScreen />
+			{/* <LoadingScreen /> */}
 			<Slider
 				activeNavItem={activeNavItem}
 				openSlider={openSlider}

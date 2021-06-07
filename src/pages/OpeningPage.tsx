@@ -2,11 +2,15 @@
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
+import { motion } from 'framer-motion';
 
 // Components
 import { Hero } from '../components/Hero';
 import { Prologue } from '../components/Prologue';
 import { NextPage } from '../components/NextPage';
+
+// Animations
+import { switchPageAnimation } from '../styles/animations';
 
 interface IOpeningPage {
     activeNavItem: INavItem,
@@ -17,7 +21,7 @@ interface IOpeningPage {
 export const OpeningPage: FunctionComponent<IOpeningPage> = (p) => {
 
     return (
-        <StyledOpeningPage>
+        <StyledOpeningPage variants={switchPageAnimation} initial="before" animate="after" exit="exit">
             <Hero></Hero>
             <Prologue activeNavItem={p.activeNavItem}></Prologue>
             <NextPage setActiveNavItem={p.setActiveNavItem} nextNavItem={p.nextNavItem}/>
@@ -25,7 +29,7 @@ export const OpeningPage: FunctionComponent<IOpeningPage> = (p) => {
     );
 }
 
-const StyledOpeningPage = styled.div`
+const StyledOpeningPage = styled(motion.div)`
     padding: 10rem 0rem;
 
     @media (max-width: 650px) {

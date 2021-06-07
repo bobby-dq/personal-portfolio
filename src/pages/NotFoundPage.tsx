@@ -3,9 +3,13 @@ import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { INavItem } from '../data/navbarData';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
+
+// Animations
+import { switchPageAnimation } from '../styles/animations';
 
 // Components
 import { PageHeader } from '../components/PageHeader';
@@ -17,7 +21,7 @@ interface INotFoundPage {
 
 export const NotFoundPage: FunctionComponent<INotFoundPage> = (p) => {
     return (
-        <StyledNotFoundPage>
+        <StyledNotFoundPage variants={switchPageAnimation} initial="before" animate="after" exit="exit">
             <PageIndicator activeNavItem={p.activeNavItem} />
             <div className="content-wrapper">
                 <PageHeader title={p.activeNavItem.title} />    
@@ -29,7 +33,7 @@ export const NotFoundPage: FunctionComponent<INotFoundPage> = (p) => {
     )
 }
 
-const StyledNotFoundPage = styled.div`
+const StyledNotFoundPage = styled(motion.div)`
     display: flex;
     padding-top: 10rem;
     min-height: 80vh;

@@ -13,10 +13,10 @@ export const LoadingScreen: FunctionComponent = () => {
     return (
             <StyledLoadingScreen variants={loadingPageAnimation} initial="before" animate="after">
                 
-                <motion.div variants={loadingTextAnimation} className="text bobby montserrat">Bobby Quilacio</motion.div>
-                <motion.div variants={loadingTextAnimation} className="text bobby">Bobby</motion.div>
-                <motion.div variants={loadingTextAnimation} className="text quilacio">Quilacio</motion.div>
-                <motion.div variants={loadingTextAnimation} className="text montserrat quilacio">Quilacio</motion.div>
+                {/* <motion.h1 variants={loadingTextAnimation} className="text bobby montserrat">Bobby Quilacio</motion.h1> */}
+                <motion.h1 className="text bobby">Bobby</motion.h1>
+                <motion.h1 variants={loadingTextAnimation} className="text quilacio">Quilacio</motion.h1>
+                {/* <motion.h1 variants={loadingTextAnimation} className="text montserrat quilacio">Quilacio</motion.h1> */}
             
             </StyledLoadingScreen>
         
@@ -40,10 +40,6 @@ const StyledLoadingScreen = styled(motion.div)`
 
     .quilacio {
         margin-left: 2rem;
-    }
-
-    .montserrat {
-        font-family: ${theme.montserrat};
     }
 
 `;

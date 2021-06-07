@@ -43,7 +43,7 @@ const StyledHero = styled.div`
     }
 
     h1 {
-        font-size: ${theme.subHeader};
+        font-size: ${theme.pageHeader};
         font-family: ${theme.montserrat};
     }
 
@@ -58,6 +58,14 @@ const StyledHero = styled.div`
             width: 100%;
         }
 
+       
+
         
+    }
+
+    @media (max-width: 900px) {
+         h1 {
+            font-size: ${theme.subHeader}
+        }
     }
 `;

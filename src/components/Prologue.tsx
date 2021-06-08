@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
 import { Link } from 'react-router-dom';
+import { motion, AnimationControls } from 'framer-motion';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
@@ -10,14 +11,23 @@ import { themeStyles as theme } from '../styles/globalStyle';
 // Components
 import { PageIndicator } from './PageIndicator';
 
+//Animations
+import { useScroll } from '../styles/useScroll';
+import { loadComponentAnimation } from '../styles/animations';
+
 interface IPrologue {
     activeNavItem: INavItem
 }
 
 export const Prologue: FunctionComponent<IPrologue> = (p) => {
+    
+    const [element, controls] = useScroll(0.33);
 
     return (
-        <StyledPrologue>
+        <StyledPrologue
+            ref={element as (node?: Element | null | undefined) => void} 
+            animate={controls as AnimationControls} variants={loadComponentAnimation} 
+            initial="hidden">
             <PageIndicator activeNavItem={p.activeNavItem}></PageIndicator>
             <div className="content">
                 <p>
@@ -43,7 +53,7 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
     );
 }   
 
-const StyledPrologue = styled.div`
+const StyledPrologue = styled(motion.div)`
     padding-top: 10rem;
     min-height: 50vh;
     font-size: ${theme.text};

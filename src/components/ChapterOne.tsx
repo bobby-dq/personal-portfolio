@@ -1,29 +1,37 @@
 // Packages
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
 import { Link } from 'react-router-dom';
+import {  motion } from 'framer-motion';
 
 // Components
 import { PageHeader } from './PageHeader';
 import { PageIndicator} from './PageIndicator';
-
+import { WhiteTextHighlight } from './WhiteTextHighlight';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
+
+// //Animations
+// import { useScroll } from '../styles/useScroll';
+// import { loadComponentAnimation } from '../styles/animations';
 
 interface IChapterOne {
     activeNavItem: INavItem
 }
 
 export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
-
+//     const [element, controls] = useScroll(0.33);
+    const [hover, setHover] = useState(false)
     return (
-        <StyledChapterOne>
+        <StyledChapterOne
+            onHoverStart={ () => setHover(!hover)}
+            onHoverEnd={ () => setHover(!hover)}>
             <PageIndicator activeNavItem={p.activeNavItem}/>
             <div className="content-wrapper">
                 <div className="about-content">
-                    <PageHeader title={p.activeNavItem.title} />
+                    <PageHeader title={p.activeNavItem.title} hover={hover} />
                     <p>Hi, my name is Bobby Quilacio and I am a full-stack developer.
                     I started my web development journey on May 2020 with 
                     Python / Django.</p>
@@ -37,14 +45,14 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
                     gym (if and only if self-determination persists).</p>
                     <p>Here is a list of technologies/languages/libraries i work with:</p>
                     <ul>
-                        <li>+ Python and Django</li>
-                        <li>+ C# and ASP.NET</li>
-                        <li>+ TypeScript and React</li>
-                        <li>+ HTML and CSS</li>
-                        <li>+ Javascript</li>
-                        <li>+ Bootstrap and Tailwind</li>
+                        <li><WhiteTextHighlight text="+ C# and ASP.NET"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="+ TypeScript and React"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="+ HTML and CSS"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="+ Javascript"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="+ Python and Django"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="+ Bootstrap and Tailwind"></WhiteTextHighlight></li>
                     </ul>
-                    <p>If you think we create something together, don’t hesitate 
+                    <p>If you think we can create something together, don’t hesitate 
                     to <Link to="/contact">contact</Link> me.</p>
                     
                 </div>
@@ -53,7 +61,7 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
     )
 }
 
-const StyledChapterOne = styled.div`
+const StyledChapterOne = styled(motion.div)`
     display: flex;
     min-height: 100vh;
     font-family: ${theme.montserrat};

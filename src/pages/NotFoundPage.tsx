@@ -1,5 +1,5 @@
 // Packages
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { INavItem } from '../data/navbarData';
 import styled from 'styled-components';
@@ -20,14 +20,17 @@ interface INotFoundPage {
 }
 
 export const NotFoundPage: FunctionComponent<INotFoundPage> = (p) => {
+    const [hover, setHover] = useState(false);
     return (
         <StyledNotFoundPage variants={switchPageAnimation} initial="before" animate="after" exit="exit">
             <PageIndicator activeNavItem={p.activeNavItem} />
-            <div className="content-wrapper">
-                <PageHeader title={p.activeNavItem.title} />    
+            <motion.div className="content-wrapper"
+                onHoverStart={ () => setHover(!hover)}
+                onHoverEnd={ () => setHover(!hover)}>
+                <PageHeader title={p.activeNavItem.title} hover={hover}/>    
                 <h1>Error {p.activeNavItem.index}</h1>
                 <Link to="/">Go Home</Link>
-            </div>
+            </motion.div>
             
         </StyledNotFoundPage>
     )

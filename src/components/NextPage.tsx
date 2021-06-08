@@ -3,12 +3,18 @@ import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
 import { Link } from 'react-router-dom';
+import { motion, AnimationControls } from 'framer-motion';
 
 // Components
 import { PageIndicator } from './PageIndicator';
+import { WhiteTextHighlight } from './WhiteTextHighlight';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
+
+// Animations
+import { useScroll } from '../styles/useScroll';
+import { loadComponentAnimation } from '../styles/animations';
 
 // Illustrations
 import arrow from '../images/icons/Arrow.png'
@@ -19,15 +25,21 @@ interface INextPage {
 }
 
 export const NextPage: FunctionComponent<INextPage> = (p) => {
+
+    const [element, controls] = useScroll(0.33);
+
     return (
         
-        <StyledNextPage>
+        <StyledNextPage
+            ref={element as (node?: Element | null | undefined) => void} 
+            animate={controls as AnimationControls} variants={loadComponentAnimation} 
+            initial="hidden">
             <PageIndicator activeNavItem={p.nextNavItem}></PageIndicator>
             <div className="text-wrapper">
-                <p>Next Chapter</p>
+                <WhiteTextHighlight text="Next Chapter"></WhiteTextHighlight>
                 <Link to={p.nextNavItem.url} onClick={() => p.setActiveNavItem(p.nextNavItem)}>
                     <h1>{p.nextNavItem.title}</h1>
-                    <div className="image-wrapper">
+                    <div className="image-wrapper" >
                         <img src={arrow} alt="Arrow" />
                     </div>
                 </Link>
@@ -36,7 +48,7 @@ export const NextPage: FunctionComponent<INextPage> = (p) => {
     )
 }
 
-const StyledNextPage = styled.div`
+const StyledNextPage = styled(motion.div)`
     min-height: 50vh;
     display: flex;
     justify-content: flex-start;
@@ -44,6 +56,8 @@ const StyledNextPage = styled.div`
     padding-top: 10rem;
     font-size: ${theme.text};
     font-family: ${theme.montserrat};
+    position: relative;
+
 
     .text-wrapper {
         flex: 1 1 66.67%;

@@ -6,15 +6,19 @@ import styled from 'styled-components';
 import { themeStyles as theme } from '../styles/globalStyle';
 import { StyledLine } from '../styles/reuseStyle';
 
+// Components
+import { AnimatedLine } from './AnimatedLine';
+
 interface IPageHeader{
-    title: string
+    title: string,
+    hover: boolean,
 }
 
 export const PageHeader: FunctionComponent<IPageHeader> = (p) => {
     return (
         <StyledPageHeader>
             <h1>{p.title}</h1>
-            <StyledLine></StyledLine>
+            <AnimatedLine hover={p.hover}></AnimatedLine>
         </StyledPageHeader>
     )
     

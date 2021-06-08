@@ -1,12 +1,15 @@
 // Packages
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
-import { StyledLine } from '../styles/reuseStyle';
+
+// Components
+import { AnimatedLine } from './AnimatedLine';
 
 interface INavItemComponent {
     navItem: INavItem,
@@ -16,10 +19,14 @@ interface INavItemComponent {
 
 export const NavItem: FunctionComponent<INavItemComponent> = (p) => {
     const url = useLocation().pathname;
+    const [hover, setHover] = useState(false);
 
     return (
-        <StyledNavItem onClick={() => p.setActiveNavItem(p.navItem)} >
-            <StyledLine></StyledLine>
+        <StyledNavItem 
+            onClick={() => p.setActiveNavItem(p.navItem)} 
+            onHoverStart={ () => setHover(!hover)}
+            onHoverEnd={ () => setHover(!hover)}>
+            <AnimatedLine hover={hover}></AnimatedLine>
             <div className={`${url === p.navItem.url ? 'active' : ''}`}>
                 <p className="nav-item-title">{p.navItem.title}</p>
                 <p>{p.navItem.subTitleOne}</p>
@@ -31,11 +38,12 @@ export const NavItem: FunctionComponent<INavItemComponent> = (p) => {
     );
 } 
 
-const StyledNavItem = styled.div`
+const StyledNavItem = styled(motion.div)`
     margin-left: 2rem;
     font-family: ${theme.montserrat};
     font-size: ${theme.smallText};
     width: 10rem;
+    transition: all 0.33s ease;
 
     .nav-item-title {
         font-weight: bold;
@@ -53,3 +61,5 @@ const StyledNavItem = styled.div`
         color: rgb(255, 0, 0);
     }
 `;
+
+

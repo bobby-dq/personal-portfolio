@@ -1,8 +1,9 @@
 // Pacakages
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // Styles
 import { themeStyles as theme} from '../styles/globalStyle';
@@ -10,6 +11,7 @@ import { StyledLine } from '../styles/reuseStyle';
 
 // Components
 import { NavItem } from './NavItem';
+import { AnimatedLine } from './AnimatedLine';
 
 interface INavbar {
     openSlider: boolean,
@@ -21,12 +23,19 @@ interface INavbar {
 
 export const Navbar: FunctionComponent<INavbar> = (p) => {
 
+    const [hover, setHover] = useState(false);
+
     return (
         <StyledNavbar>
-            <Link to="/" className="logo-wrapper">
-                <StyledLine></StyledLine>
-                <h1>Bobby <br /> Quilacio</h1>
-            </Link>  
+            <motion.div
+            onHoverStart={() => setHover(!hover)}
+            onHoverEnd={() => setHover(!hover)}>
+                <Link to="/" className="logo-wrapper">
+                    <AnimatedLine hover={hover} />
+                    <h1>Bobby <br /> Quilacio</h1>
+                </Link>  
+            </motion.div>
+            
             <ul className="nav-item-wrapper">
                 {p.navbarData.map(i =>
                     <li ><Link to={`${i.url}`}>

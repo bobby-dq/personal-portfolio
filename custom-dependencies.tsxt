@@ -2,8 +2,8 @@
 npx create-react-app <AppName> --template typescript
 npm install --save-dev react-router-dom @types/react-router-dom (installed)
 npm install --save-dev framer-motion (installed)
-npm install --save-dev react-intersection-observer 
+npm install --save-dev react-intersection-observer (installed)
 npm install --save-dev styled-components @types/styled-components (installed)
-npm install --save-dev emailjs-com
-npm install --save-dev styled-icons
+npm install --save-dev emailjs-com (installed)
+npm install --save-dev styled-icons (installed)
 npm install --save-dev uuid @types/uuid (installed)

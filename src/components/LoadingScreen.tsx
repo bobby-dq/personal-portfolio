@@ -13,10 +13,11 @@ export const LoadingScreen: FunctionComponent = () => {
     return (
             <StyledLoadingScreen variants={loadingPageAnimation} initial="before" animate="after">
                 
-                {/* <motion.h1 variants={loadingTextAnimation} className="text bobby montserrat">Bobby Quilacio</motion.h1> */}
-                <motion.h1 className="text bobby">Bobby</motion.h1>
-                <motion.h1 variants={loadingTextAnimation} className="text quilacio">Quilacio</motion.h1>
-                {/* <motion.h1 variants={loadingTextAnimation} className="text montserrat quilacio">Quilacio</motion.h1> */}
+                <div className="section section1"></div>
+                <div className="section section1"></div>
+                <div className="section section1"></div>
+                <div className="section section1"></div>
+                <div className="section section1"></div>
             
             </StyledLoadingScreen>
         
@@ -24,22 +25,14 @@ export const LoadingScreen: FunctionComponent = () => {
 }
 
 const StyledLoadingScreen = styled(motion.div)`
-    background: ${theme.dirtyWhite};
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-
-    .text {
-        color: ${theme.darkGray};
-        font-size: ${theme.subHeader}
-    }
-
-    .quilacio {
-        margin-left: 2rem;
-    }
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   left: 0%;
+   top: 0%;
+   .section {
+       width: 100%;
+       background: ${theme.dirtyWhite}
+   }
 
 `;

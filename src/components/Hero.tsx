@@ -1,6 +1,7 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
+import { motion, AnimationControls } from 'framer-motion';
 
 // Illustrations
 import brandLogo from '../images/icons/logo-solid.png';
@@ -8,21 +9,32 @@ import brandLogo from '../images/icons/logo-solid.png';
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
 
+//Animations
+import { useScroll } from '../styles/useScroll';
+import { loadComponentAnimation, divWrapperAnimation, heroTextAnimation } from '../styles/animations';
+
 export const Hero: FunctionComponent = () => {
+    
+    const [element, controls] = useScroll(0.33);
 
     return (
-        <StyledHero>
-            <div className="text-wrapper">
+        <StyledHero 
+        ref={element as (node?: Element | null | undefined) => void} 
+        animate={controls as AnimationControls} variants={loadComponentAnimation} 
+        initial="hidden">
+            <motion.div className="text-wrapper" variants={divWrapperAnimation}>
                 <div className="text text1"><p>Hello my name is</p></div>
-                <div className="text text2"><h1>Bobby Quilacio</h1></div>
+                <div className="text text2"><motion.h1 variants={heroTextAnimation}>Bobby</motion.h1></div>
+                <div className="text text2"><motion.h1 variants={heroTextAnimation}>Quilacio</motion.h1></div>
                 <div className="text text3"><p>and I am a</p></div>
-                <div className="text text4"><h1>Full-Stack Developer</h1></div>
-            </div>
+                <div className="text text4"><motion.h1 variants={heroTextAnimation}>Full-Stack</motion.h1></div>
+                <div className="text text4"><motion.h1 variants={heroTextAnimation}>Developer</motion.h1></div>
+            </motion.div>
         </StyledHero>
     );
 }
 
-const StyledHero = styled.div`
+const StyledHero = styled(motion.div)`
     min-height: 80vh;
     background:url(${brandLogo});
     background-size: contain;
@@ -40,6 +52,11 @@ const StyledHero = styled.div`
         align-items: flex-start;
         width: 66.67%;
         margin-left: auto;
+    }
+
+    .text {
+        position: relative;
+        overflow: hidden;
     }
 
     h1 {

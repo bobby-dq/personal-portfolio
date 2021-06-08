@@ -3,27 +3,37 @@ import { FunctionComponent, useState } from 'react';
 import styled from 'styled-components';
 import { IWork } from '../data/workData';
 import { motion } from 'framer-motion';
-
-// Packages
 import { Github } from '@styled-icons/bootstrap/';
 import { LinkExternal } from '@styled-icons/boxicons-regular/';
 import { ChevronDown } from '@styled-icons/boxicons-regular';
 import { ChevronUp } from '@styled-icons/boxicons-regular';
 
+// Components
+import { AnimatedLine } from './AnimatedLine';
+
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
 import { StyledLine } from  '../styles/reuseStyle';
+
+// //Animations
+// import { useScroll } from '../styles/useScroll';
+// import { loadComponentAnimation } from '../styles/animations';
 
 interface IWorkItem {
     workItem: IWork
 }
 
 export const WorkItem: FunctionComponent<IWorkItem> = (p) => {
+    
+    // const [element, controls] = useScroll(0.33);
 
-    const [showPhoto, setShowPhoto] = useState(true);
+    const [showPhoto, setShowPhoto] = useState(false);
+    const [hover, setHover] = useState(false);
 
     return (
-        <StyledWorkItem layout>
+        <StyledWorkItem layout
+            onHoverStart={ () => setHover(!hover)}
+            onHoverEnd={ () => setHover(!hover)}>
             <motion.div className="title" layout>
                 <h1>{p.workItem.title}</h1>
             </motion.div>
@@ -51,7 +61,7 @@ export const WorkItem: FunctionComponent<IWorkItem> = (p) => {
                 </div>
                 
             </motion.div>
-            <SLine></SLine>
+            <AnimatedLine hover={hover}></AnimatedLine>
         </StyledWorkItem>
     );
 }

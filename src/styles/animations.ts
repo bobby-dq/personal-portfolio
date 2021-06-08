@@ -31,11 +31,11 @@ export const loadingTextAnimation = {
 export const switchPageAnimation = {
     before: {
         opacity: 0,
-        x: '-100%',
+        x: '50%',
     },
     after: {
         opacity: 1,
-        x: 0,
+        x: "0%",
         transition: {
             duration: 0.50,
             when: 'beforeChildren',
@@ -43,10 +43,64 @@ export const switchPageAnimation = {
         }
     },
     exit: {
-        x: '100%',
+        x: '-50%',
         opacity: 0,
         transition: {
             duration: 0.50
+        }
+    }
+}
+
+export const loadComponentAnimation = {
+    before: {
+        opacity: 0,
+        y: "10%",
+    },
+    after: {
+        opacity: 1, 
+        y: "0%",
+        transition: {
+            duration: 0.33,
+            when: 'beforeChildren',
+            staggerChildren: 0.4,
+        }
+    }
+}
+
+export const hoveredLineAnimation = {
+    before: {
+        x: "-100%"
+    },
+    after: {
+        x: "0%",
+        transition: {
+            duration: 0.33,
+        }
+    }
+}
+
+export const divWrapperAnimation = {
+    before: {
+        opacity: 1,
+    },
+    after: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+            when: "afterChildren",
+            staggerChildren: 0.1
+        }
+    }
+}
+
+export const heroTextAnimation = {
+    before: {
+        y: "100%",
+    },
+    after: {
+        y: "0%",
+        transition: {
+            duration: 0.33
         }
     }
 }

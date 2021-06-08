@@ -3,6 +3,7 @@ import { FunctionComponent, SyntheticEvent, useState } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
 import { INavItem } from '../data/navbarData';
+import { motion } from 'framer-motion';
 
 // Components
 import { PageHeader } from './PageHeader';
@@ -11,12 +12,18 @@ import { PageIndicator } from './PageIndicator';
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
 
+// //Animations
+// import { useScroll } from '../styles/useScroll';
+// import { loadComponentAnimation } from '../styles/animations';
+
 interface IChapterThree {
     activeNavItem: INavItem
 }
 
 export const ChapterThree: FunctionComponent<IChapterThree> = (p) => {
-
+    
+    // const [element, controls] = useScroll(0.33);
+    const [hover, setHover] = useState(false);
     const [sent, setSent] = useState(false);
 
     function sendEmail(e: SyntheticEvent) {
@@ -36,10 +43,12 @@ export const ChapterThree: FunctionComponent<IChapterThree> = (p) => {
     }
 
     return (
-        <StyledChapterThree>
+        <StyledChapterThree
+            onHoverStart={ () => setHover(!hover)}
+            onHoverEnd={ () => setHover(!hover)}>
             <PageIndicator activeNavItem={p.activeNavItem} />
             <div className="content-wrapper">
-                <PageHeader title={p.activeNavItem.title}/>
+                <PageHeader title={p.activeNavItem.title} hover={hover}/>
                 <div className="message">
                     <p>What’s next? If you would like to know more or if you know
                     something we can create together, please feel free to reach
@@ -71,7 +80,7 @@ export const ChapterThree: FunctionComponent<IChapterThree> = (p) => {
 
 }
 
-const StyledChapterThree = styled.div`
+const StyledChapterThree = styled(motion.div)`
     min-height: 100vh;
     font-family: ${theme.montserrat};
     font-size: ${theme.text};

@@ -1,8 +1,9 @@
 // Packages
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { INavItem } from '../data/navbarData';
+import { motion } from 'framer-motion';
 
 // Components
 import { PageHeader } from './PageHeader';
@@ -12,6 +13,10 @@ import { PageIndicator } from './PageIndicator';
 // Styled
 import { themeStyles as theme } from '../styles/globalStyle';
 
+// //Animations
+// import { useScroll } from '../styles/useScroll';
+// import { loadComponentAnimation } from '../styles/animations';
+
 // Data
 import resume from '../data/BobbyQuilacioResume.pdf';
 
@@ -20,12 +25,17 @@ interface IEpilogue {
 }
 
 export const Epilogue: FunctionComponent<IEpilogue> = (p) => {
+    const [hover, setHover] = useState(false);
+    
+    // const [element, controls] = useScroll(0.33);
 
     return(
-        <StyledEpilogue>
+        <StyledEpilogue
+            onHoverStart={ () => setHover(!hover)}
+            onHoverEnd={ () => setHover(!hover)}>
             <PageIndicator activeNavItem={p.activeNavItem}></PageIndicator>
             <div className="content-wrapper">
-                <PageHeader title={p.activeNavItem.title}></PageHeader>
+                <PageHeader title={p.activeNavItem.title} hover={hover}></PageHeader>
                 <div className="body">
                     <p>You have reached the end. Thank you very much for taking the time checking out my portfolio. Click
                     the link to grab a copy of my professional resume. Again, thank you very much!</p>
@@ -36,7 +46,7 @@ export const Epilogue: FunctionComponent<IEpilogue> = (p) => {
     );
 }
 
-const StyledEpilogue = styled.div`
+const StyledEpilogue = styled(motion.div)`
     display: flex;
     min-height: 50vh;
     font-family: ${theme.montserrat};

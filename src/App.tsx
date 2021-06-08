@@ -31,6 +31,8 @@ function App() {
             window.scrollTo(0,0);
         } , 1)
     }
+
+	
 	
 	// Data
 	const navbarData: INavItem[] = generateNavbarData();
@@ -42,14 +44,23 @@ function App() {
 	const [activeNavItem, setActiveNavItem] = useState(navbarData[0]);
 	const [openSlider, setOpenSlider] = useState(false);
 
-	// Effect
-	useEffect(() => {
+	// Change ActiveNavItem
+	let changeActiveNavItem = function(){
 		let currentPage = navbarData.filter((page) => page.url === url)[0];
 		if (currentPage === undefined) {
 			currentPage = notFoundData;
 		}
 		setActiveNavItem(currentPage);
+	}
+
+
+	// Effect
+	useEffect(() => {
+		changeActiveNavItem();
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	},[url]);
+
+
 
 	
 

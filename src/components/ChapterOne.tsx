@@ -1,5 +1,5 @@
 // Packages
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
 import { Link } from 'react-router-dom';

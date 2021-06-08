@@ -1,5 +1,5 @@
 // Packages
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 import { generateWorkData } from '../data/workData';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';

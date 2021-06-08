@@ -13,7 +13,6 @@ import { AnimatedLine } from './AnimatedLine';
 
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
-import { StyledLine } from  '../styles/reuseStyle';
 
 // //Animations
 // import { useScroll } from '../styles/useScroll';
@@ -122,8 +121,4 @@ const StyledWorkItem = styled(motion.div)`
             margin-right: 2rem;
         }
     }
-`;
-
-const SLine = styled(StyledLine)`
-    background: ${theme.lightGray};
 `;

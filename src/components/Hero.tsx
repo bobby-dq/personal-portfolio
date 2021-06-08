@@ -1,7 +1,7 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { motion, AnimationControls } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 // Illustrations
 import brandLogo from '../images/icons/logo-solid.png';
@@ -10,12 +10,9 @@ import brandLogo from '../images/icons/logo-solid.png';
 import { themeStyles as theme } from '../styles/globalStyle';
 
 //Animations
-import { useScroll } from '../styles/useScroll';
-import { loadComponentAnimation, divWrapperAnimation, heroTextAnimation } from '../styles/animations';
+import {  divWrapperAnimation, heroTextAnimation } from '../styles/animations';
 
 export const Hero: FunctionComponent = () => {
-    
-    const [element, controls] = useScroll(0.33);
 
     return (
         <StyledHero>

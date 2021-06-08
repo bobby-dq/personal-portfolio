@@ -1,4 +1,4 @@
-import { createGlobalStyle, keyframes } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import noisetexture from '../images/background/noise-texture.png';
 
 export const themeStyles = {

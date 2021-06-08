@@ -7,8 +7,6 @@ import { motion } from 'framer-motion';
 
 // Styles
 import { themeStyles as theme} from '../styles/globalStyle';
-import { StyledLine } from '../styles/reuseStyle';
-
 // Components
 import { NavItem } from './NavItem';
 import { AnimatedNavLine } from './AnimatedLine';
@@ -38,9 +36,8 @@ export const Navbar: FunctionComponent<INavbar> = (p) => {
             
             <ul className="nav-item-wrapper">
                 {p.navbarData.map(i =>
-                    <li ><Link to={`${i.url}`}>
+                    <li key={i.id} ><Link to={`${i.url}`}>
                         <NavItem 
-                            key={i.id} 
                             navItem={i} 
                             setActiveNavItem={p.setActiveNavItem} 
                             activeNavItem={p.activeNavItem}

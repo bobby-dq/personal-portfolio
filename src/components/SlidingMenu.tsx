@@ -30,6 +30,7 @@ export const SlidingMenu: FunctionComponent<ISlidingMenu> = (p) => {
             <div className="item-wrapper">
                 {p.navbarData.map( i =>
                     <SlidingMenuItem
+                        key={i.id}
                         setOpenSlider={p.setOpenSlider}
                         activeNavItem={p.activeNavItem}
                         openSlider={p.openSlider}

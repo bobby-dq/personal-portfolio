@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
 import { motion } from 'framer-motion';
 
-// Styles
-import { themeStyles as theme } from '../styles/globalStyle';
-
 // Animations
 import { switchPageAnimation } from '../styles/animations';
 

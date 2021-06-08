@@ -1,5 +1,4 @@
 // Packages
-import { url } from 'inspector';
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';

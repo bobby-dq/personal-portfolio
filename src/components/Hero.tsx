@@ -18,10 +18,7 @@ export const Hero: FunctionComponent = () => {
     const [element, controls] = useScroll(0.33);
 
     return (
-        <StyledHero 
-        ref={element as (node?: Element | null | undefined) => void} 
-        animate={controls as AnimationControls} variants={loadComponentAnimation} 
-        initial="hidden">
+        <StyledHero>
             <motion.div className="text-wrapper" variants={divWrapperAnimation}>
                 <div className="text text1"><p>Hello my name is</p></div>
                 <div className="text text2"><motion.h1 variants={heroTextAnimation}>Bobby</motion.h1></div>
@@ -62,6 +59,10 @@ const StyledHero = styled(motion.div)`
     h1 {
         font-size: ${theme.pageHeader};
         font-family: ${theme.montserrat};
+        transition: all ease 0.33s;
+        &:hover {
+            color:red;
+        }
     }
 
     .text3 {

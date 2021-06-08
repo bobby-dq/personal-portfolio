@@ -3,27 +3,31 @@ import { themeStyles as theme } from './globalStyle';
 export const loadingPageAnimation = {
     before: {
         opacity: 1,
-        x: 0
+        x: 0,
+        scale: 1,
     },
     after: {
-        x: "0",
+        opacity: 0,
+        scale: 5,
+        x: "-500%",
         transition: {
-            duration: 0.33,
+            duration: 2,
             ease: "easeOut",
             when: "afterChildren",
-            staggerChildren: 0.33 
+            staggerChildren: 0.5,
+            delay: 1
         }
     },
 }
 
-export const loadingTextAnimation = {
+export const loadingDivAnimation = {
     before: {
-        fontFamily: `${theme.montserrat}`,
+        backgroundColor: theme.darkGray,
     },
     after: {
-        fontFamily: [`serif`, `sans-serif`, `serif`],   
-        transition : {
-            times: [0.33, 0.33, 0.33]
+        backgroundColor: theme.dirtyWhite,
+        transition: {
+            duration: 0.33
         }
     },
 }

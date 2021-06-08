@@ -17,10 +17,10 @@ export const Hero: FunctionComponent = () => {
     return (
         <StyledHero>
             <motion.div className="text-wrapper" variants={divWrapperAnimation}>
-                <div className="text text1"><p>Hello my name is</p></div>
+                <div className="text text1"><motion.p variants={heroTextAnimation}>Hello my name is</motion.p></div>
                 <div className="text text2"><motion.h1 variants={heroTextAnimation}>Bobby</motion.h1></div>
                 <div className="text text2"><motion.h1 variants={heroTextAnimation}>Quilacio</motion.h1></div>
-                <div className="text text3"><p>and I am a</p></div>
+                <div className="text text3"><motion.p variants={heroTextAnimation}>and I am a</motion.p></div>
                 <div className="text text4"><motion.h1 variants={heroTextAnimation}>Full-Stack</motion.h1></div>
                 <div className="text text4"><motion.h1 variants={heroTextAnimation}>Developer</motion.h1></div>
             </motion.div>

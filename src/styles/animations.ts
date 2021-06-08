@@ -83,6 +83,19 @@ export const hoveredLineAnimation = {
     }
 }
 
+export const inViewLineAnimation = {
+    before: {
+        x: "-100%"
+    },
+    after: {
+        x: "0%",
+        transition: {
+            duration: 0.33,
+            delay: 0.5
+        }
+    }
+}
+
 export const divWrapperAnimation = {
     before: {
         opacity: 1,
@@ -100,11 +113,13 @@ export const divWrapperAnimation = {
 export const heroTextAnimation = {
     before: {
         y: "100%",
+        opacity: 0,
     },
     after: {
+        opacity: 1,
         y: "0%",
         transition: {
-            duration: 0.33
+            duration: 0.1
         }
     }
 }

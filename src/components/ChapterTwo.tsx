@@ -22,17 +22,14 @@ interface IChapterTwo {
 }
 
 export const ChapterTwo: FunctionComponent<IChapterTwo> = (p) => {
-    const [hover, setHover] = useState(false)
 
     const workData = generateWorkData();
 
     return (
-        <StyledChapterTwo
-            onHoverStart={ () => setHover(!hover)}
-            onHoverEnd={ () => setHover(!hover)}>
+        <StyledChapterTwo>
             <PageIndicator activeNavItem={p.activeNavItem} />
             <div className="content-wrapper">
-                <PageHeader title={p.activeNavItem.title} hover={hover}></PageHeader>
+                <PageHeader title={p.activeNavItem.title}></PageHeader>
                 <div className="works-wrapper">
                     {workData.map( w => <WorkItem workItem={w} />)}
                 </div>

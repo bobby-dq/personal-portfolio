@@ -22,16 +22,12 @@ interface IChapterOne {
 }
 
 export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
-//     const [element, controls] = useScroll(0.33);
-    const [hover, setHover] = useState(false)
     return (
-        <StyledChapterOne
-            onHoverStart={ () => setHover(!hover)}
-            onHoverEnd={ () => setHover(!hover)}>
+        <StyledChapterOne>
             <PageIndicator activeNavItem={p.activeNavItem}/>
             <div className="content-wrapper">
                 <div className="about-content">
-                    <PageHeader title={p.activeNavItem.title} hover={hover} />
+                    <PageHeader title={p.activeNavItem.title}/>
                     <p>Hi, my name is Bobby Quilacio and I am a full-stack developer.
                     I started my web development journey on May 2020 with 
                     Python / Django.</p>

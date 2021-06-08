@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { themeStyles as theme } from '../styles/globalStyle';
 
 // Components
-import { AnimatedLine } from './AnimatedLine';
+import { AnimatedNavLine } from './AnimatedLine';
 
 interface INavItemComponent {
     navItem: INavItem,
@@ -26,7 +26,7 @@ export const NavItem: FunctionComponent<INavItemComponent> = (p) => {
             onClick={() => p.setActiveNavItem(p.navItem)} 
             onHoverStart={ () => setHover(!hover)}
             onHoverEnd={ () => setHover(!hover)}>
-            <AnimatedLine hover={hover}></AnimatedLine>
+            <AnimatedNavLine hover={hover}></AnimatedNavLine>
             <div className={`${url === p.navItem.url ? 'active' : ''}`}>
                 <p className="nav-item-title">{p.navItem.title}</p>
                 <p>{p.navItem.subTitleOne}</p>

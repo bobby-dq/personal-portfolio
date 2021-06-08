@@ -25,17 +25,12 @@ interface IEpilogue {
 }
 
 export const Epilogue: FunctionComponent<IEpilogue> = (p) => {
-    const [hover, setHover] = useState(false);
-    
-    // const [element, controls] = useScroll(0.33);
 
     return(
-        <StyledEpilogue
-            onHoverStart={ () => setHover(!hover)}
-            onHoverEnd={ () => setHover(!hover)}>
+        <StyledEpilogue>
             <PageIndicator activeNavItem={p.activeNavItem}></PageIndicator>
             <div className="content-wrapper">
-                <PageHeader title={p.activeNavItem.title} hover={hover}></PageHeader>
+                <PageHeader title={p.activeNavItem.title}></PageHeader>
                 <div className="body">
                     <p>You have reached the end. Thank you very much for taking the time checking out my portfolio. Click
                     the link to grab a copy of my professional resume. Again, thank you very much!</p>

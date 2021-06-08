@@ -1,20 +1,33 @@
 // Packages
-import { FunctionComponent, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { FunctionComponent } from 'react';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
 
 // Styles
 import { StyledLine, StyledRedLine } from '../styles/reuseStyle';
-
-// Animation 
-import { hoveredLineAnimation } from '../styles/animations';
 
 interface IAnimatedLine {
     hover: boolean;
 }
 
-export const AnimatedLine: FunctionComponent<IAnimatedLine> = (p) => {
-    const animate = useAnimation();
+export const AnimatedLine: FunctionComponent = () => {
+    const [element, view] = useInView();
+
+    return (
+        <StyledAnimatedLine ref={element}>
+            <StyledRedLine 
+                animate={{x: `${view ? '0%' : '-200%'}`}}
+                transition={{duration: 0.5, delay: 0.33}}>
+            </StyledRedLine>
+            <StyledLine 
+                animate={{x: `${view ? '100%' : '0%'}`}}
+                transition={{duration: 0.5, delay: 0.25 }}>
+            </StyledLine>
+        </StyledAnimatedLine>
+    );
+}
+
+export const AnimatedNavLine: FunctionComponent<IAnimatedLine> = (p) => {
     return (
         <StyledAnimatedLine>
             <StyledRedLine 

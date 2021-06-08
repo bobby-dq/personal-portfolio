@@ -21,9 +21,6 @@ interface IChapterThree {
 }
 
 export const ChapterThree: FunctionComponent<IChapterThree> = (p) => {
-    
-    // const [element, controls] = useScroll(0.33);
-    const [hover, setHover] = useState(false);
     const [sent, setSent] = useState(false);
 
     function sendEmail(e: SyntheticEvent) {
@@ -38,17 +35,11 @@ export const ChapterThree: FunctionComponent<IChapterThree> = (p) => {
             (e.target as HTMLFormElement).reset();
     }
 
-    function resetForms(e: SyntheticEvent) {
-        
-    }
-
     return (
-        <StyledChapterThree
-            onHoverStart={ () => setHover(!hover)}
-            onHoverEnd={ () => setHover(!hover)}>
+        <StyledChapterThree>
             <PageIndicator activeNavItem={p.activeNavItem} />
             <div className="content-wrapper">
-                <PageHeader title={p.activeNavItem.title} hover={hover}/>
+                <PageHeader title={p.activeNavItem.title}/>
                 <div className="message">
                     <p>What’s next? If you would like to know more or if you know
                     something we can create together, please feel free to reach

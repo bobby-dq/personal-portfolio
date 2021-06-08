@@ -11,7 +11,7 @@ import { StyledLine } from '../styles/reuseStyle';
 
 // Components
 import { NavItem } from './NavItem';
-import { AnimatedLine } from './AnimatedLine';
+import { AnimatedNavLine } from './AnimatedLine';
 
 interface INavbar {
     openSlider: boolean,
@@ -31,7 +31,7 @@ export const Navbar: FunctionComponent<INavbar> = (p) => {
             onHoverStart={() => setHover(!hover)}
             onHoverEnd={() => setHover(!hover)}>
                 <Link to="/" className="logo-wrapper">
-                    <AnimatedLine hover={hover} />
+                    <AnimatedNavLine hover={hover} />
                     <h1>Bobby <br /> Quilacio</h1>
                 </Link>  
             </motion.div>
@@ -71,6 +71,7 @@ const StyledNavbar = styled.div`
     }
 
     @media (max-width: 650px) {
+        padding-top: 6rem;
         .nav-item-wrapper {
             display: none;
         }

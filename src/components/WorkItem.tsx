@@ -24,16 +24,11 @@ interface IWorkItem {
 }
 
 export const WorkItem: FunctionComponent<IWorkItem> = (p) => {
-    
-    // const [element, controls] = useScroll(0.33);
 
     const [showPhoto, setShowPhoto] = useState(false);
-    const [hover, setHover] = useState(false);
 
     return (
-        <StyledWorkItem layout
-            onHoverStart={ () => setHover(!hover)}
-            onHoverEnd={ () => setHover(!hover)}>
+        <StyledWorkItem layout>
             <motion.div className="title" layout>
                 <h1>{p.workItem.title}</h1>
             </motion.div>
@@ -61,7 +56,7 @@ export const WorkItem: FunctionComponent<IWorkItem> = (p) => {
                 </div>
                 
             </motion.div>
-            <AnimatedLine hover={hover}></AnimatedLine>
+            <AnimatedLine></AnimatedLine>
         </StyledWorkItem>
     );
 }

@@ -20,18 +20,14 @@ interface INotFoundPage {
 }
 
 export const NotFoundPage: FunctionComponent<INotFoundPage> = (p) => {
-    const [hover, setHover] = useState(false);
     return (
         <StyledNotFoundPage variants={switchPageAnimation} initial="before" animate="after" exit="exit">
             <PageIndicator activeNavItem={p.activeNavItem} />
-            <motion.div className="content-wrapper"
-                onHoverStart={ () => setHover(!hover)}
-                onHoverEnd={ () => setHover(!hover)}>
-                <PageHeader title={p.activeNavItem.title} hover={hover}/>    
+            <motion.div className="content-wrapper">
+                <PageHeader title={p.activeNavItem.title} />    
                 <h1>Error {p.activeNavItem.index}</h1>
                 <Link to="/">Go Home</Link>
             </motion.div>
-            
         </StyledNotFoundPage>
     )
 }

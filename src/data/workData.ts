@@ -28,7 +28,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Budgeting App (ASP.NET)",
-            description: "Personal Budgeting App is a CRUD web application to help you track your personal finances, budgets, and expenses. The backend is built using ASP.NET and utilizes Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
+            description: "Budgeting App is a ASP.NET Core MVC App that helps you track your personal finances, budgets, and expenses. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
             liveUrl: "https://personalbudgeting.azurewebsites.net/",
             githubRepo: "https://github.com/bobby-dq/BudgetingApp",
             technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
@@ -46,7 +46,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Baby Tracker",
-            description: "A web application where you can track your newborn's eating, sleeping habits, medication, and growth. The backend is built using ASP.NET and utilizes Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
+            description: "Baby Tracker is a ASP.NET Core MVC App track your newborn's eating, sleeping habits, medication, and growth. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
             githubRepo: "https://github.com/bobby-dq/BabyTracker",
             technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
             photo: babyTracker

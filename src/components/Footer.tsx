@@ -23,7 +23,7 @@ export const Footer: FunctionComponent = () => {
                 </a>
             </div>
             <div className="social-wrapper">
-                <a href="https://www.linkedin.com/in/bob-joshua-quilacio/" target="_blank" rel="noreferrer" className="social">
+                <a href="https://www.linkedin.com/in/quilaciob/" target="_blank" rel="noreferrer" className="social">
                     <Linkedin size="3rem" color="red" />
                     <p>Bob Joshua Quilacio</p>
                 </a>

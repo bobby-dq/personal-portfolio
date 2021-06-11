@@ -41,7 +41,7 @@ export const SlidingMenu: FunctionComponent<ISlidingMenu> = (p) => {
             </div>
             <div className="socials-wrapper">
                 <a className="social-link" target="_blank" rel="noreferrer" href="https://github.com/bobby-dq"><Github size="3rem" color="black"></Github></a>
-                <a className="social-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/bob-joshua-quilacio/"><Linkedin size="3rem" color="black"></Linkedin></a>
+                <a className="social-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/quilaciob/"><Linkedin size="3rem" color="black"></Linkedin></a>
                 <a className="social-link" href="mailto: josh.quilacio@gmail.com"><Email size="3rem" color="black"></Email></a>
             </div>
             

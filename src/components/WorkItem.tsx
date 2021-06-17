@@ -78,7 +78,7 @@ const StyledWorkItem = styled(motion.div)`
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        cursor: n-resize; 
+        cursor: pointer; 
     }
 
     .image-wrapper {

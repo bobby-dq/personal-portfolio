@@ -9,11 +9,15 @@ import { Discord } from '@styled-icons/fa-brands';
 // Styles
 import { themeStyles as theme } from '../styles/globalStyle';
 
+// Components
+import { AnimatedLine } from './AnimatedLine';
+
 export const Footer: FunctionComponent = () => {
     return (
         <StyledFooter>
+            <AnimatedLine></AnimatedLine>
 
-            <div className="social-wrapper">
+            <div className="social-wrapper top-social">
                 <h1>Bobby Quilacio</h1>
             </div>
             <div className="social-wrapper">
@@ -51,14 +55,19 @@ export const Footer: FunctionComponent = () => {
 const StyledFooter = styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 75vh;
-    justify-content: center;
+    min-height: 50vh;
+    justify-content: flex-start;
+
+    padding-top: 5rem;
 
     h1 {
         margin-bottom: 2rem ;
         font-size: ${theme.subHeader};
     }
 
+    .top-social {
+        padding-top: 2rem;
+    }
     .social {
         font-family: ${theme.montserrat};
         font-size: ${theme.text};  

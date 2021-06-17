@@ -41,12 +41,12 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
                     gym (if and only if self-determination persists).</p>
                     <p>Here is a list of technologies/languages/libraries i work with:</p>
                     <ul>
-                        <li><WhiteTextHighlight text="+ C# and ASP.NET"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="+ TypeScript and React"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="+ HTML and CSS"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="+ Javascript"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="+ Python and Django"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="+ Bootstrap and Tailwind"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="C# and ASP.NET"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="TypeScript and React"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="HTML and CSS"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="Javascript"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="Python and Django"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="Bootstrap and Tailwind"></WhiteTextHighlight></li>
                     </ul>
                     <p>If you think we can create something together, don’t hesitate 
                     to <Link to="/contact">contact</Link> me.</p>

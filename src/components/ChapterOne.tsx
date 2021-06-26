@@ -44,7 +44,7 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
                         <li><WhiteTextHighlight text="C# and ASP.NET"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="TypeScript and React"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="HTML and CSS"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="Javascript"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="Javascript and Gatsby"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="Python and Django"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="Bootstrap and Tailwind"></WhiteTextHighlight></li>
                     </ul>

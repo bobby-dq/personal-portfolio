@@ -100,6 +100,7 @@ const StyledWorkItem = styled(motion.div)`
     p {
         padding-bottom: 2rem;
         font-weight: lighter;
+        font-size: 1.6rem;
     }
 
     ul {

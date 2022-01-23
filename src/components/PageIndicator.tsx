@@ -18,8 +18,8 @@ export const PageIndicator: FunctionComponent<IPageIndicator> = (p) => {
                 <img src={p.activeNavItem.icon} alt={p.activeNavItem.title} />
             </div>
             <div className="text-wrapper">
-                <h1>{p.activeNavItem.chapter}</h1>
-                <p>{p.activeNavItem.subTitleOne} {p.activeNavItem.subTitleTwo}</p>
+                <h1>// {p.activeNavItem.chapter.toUpperCase()}</h1>
+                {/* <p>{p.activeNavItem.subTitleOne} {p.activeNavItem.subTitleTwo}</p> */}
             </div>
             
         </StyledPageIndicator>
@@ -33,7 +33,7 @@ const StyledPageIndicator = styled.div`
     .text-wrapper {
        h1 {
             font-size: ${theme.text};
-            font-family: ${theme.playfair};
+            font-family: ${theme.montserrat};
             word-wrap: break-word;
         }
         p {

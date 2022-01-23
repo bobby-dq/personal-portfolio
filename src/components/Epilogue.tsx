@@ -52,6 +52,7 @@ const StyledEpilogue = styled(motion.div)`
 
         p {
             padding: 2rem 0rem 4rem 0rem;
+            font-size: 1.6rem;
         }
 
         a {

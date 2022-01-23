@@ -76,6 +76,7 @@ const StyledChapterThree = styled(motion.div)`
     font-family: ${theme.montserrat};
     font-size: ${theme.text};
     display: flex;
+    
 
     .content-wrapper {
         flex: 1 1 66.67%;
@@ -83,6 +84,7 @@ const StyledChapterThree = styled(motion.div)`
 
     .message {
         margin-top: 2rem;
+        font-size: 1.6rem;
     }
 
     .form-wrapper {

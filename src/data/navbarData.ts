@@ -34,7 +34,7 @@ export const generateNavbarData:() => INavItem[] = () => {
     return [
         {
             id: uuidv4(),
-            title: "Opening",
+            title: "OPENING",
             subTitleOne: "A brief",
             subTitleTwo: "context",
             index: "00",
@@ -44,7 +44,7 @@ export const generateNavbarData:() => INavItem[] = () => {
         },
         {
             id: uuidv4(),
-            title: "About",
+            title: "ABOUT",
             subTitleOne: "A bit of an",
             subTitleTwo: "introduction",
             index: "01",
@@ -54,7 +54,7 @@ export const generateNavbarData:() => INavItem[] = () => {
         },
         {
             id: uuidv4(),
-            title: "Works",
+            title: "WORKS",
             subTitleOne: "A quick",
             subTitleTwo: "show-and-tell",
             index: "02",
@@ -64,7 +64,7 @@ export const generateNavbarData:() => INavItem[] = () => {
         },
         {
             id: uuidv4(),
-            title: "Contact",
+            title: "CONTACT",
             subTitleOne: "A short",
             subTitleTwo: "message to me",
             index: "03",
@@ -74,7 +74,7 @@ export const generateNavbarData:() => INavItem[] = () => {
         },
         {
             id: uuidv4(),
-            title: "Resume",
+            title: "RESUME",
             subTitleOne: "A professional",
             subTitleTwo: "summary",
             chapter: "Epilogue",

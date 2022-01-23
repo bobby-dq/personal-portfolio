@@ -71,6 +71,7 @@ const StyledChapterOne = styled(motion.div)`
         
         p {
             margin-top: 2rem;
+            font-size: 1.6rem;
         }
 
         a {

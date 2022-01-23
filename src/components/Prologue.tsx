@@ -39,14 +39,14 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
                 <p>
                     This portfolio is meant to be navigated like a book 
                     but feel free to skip ahead, each chapter are
-                    independent of each other, so click any of the links in the side bar or nav-bar. Here are links to other chapters too:
+                    independent of each other, so click any of the links in the side bar or nav-bar. 
                 </p>
-                <ul>
+                {/* <ul>
                     <li><Link to="/about">+ Chapter 01: About</Link></li>
                     <li><Link to="/works">+ Chapter 02: Works</Link></li>
                     <li><Link to="/contact">+ Chapter 03: Contact</Link></li>
                     <li><Link to="/resume">+ Epilogue: Resume</Link></li>
-                </ul>
+                </ul> */}
                 <h1>Bobby Quilacio</h1>
             </div>
         </StyledPrologue>
@@ -66,6 +66,7 @@ const StyledPrologue = styled(motion.div)`
         flex: 1 1 66.67%;
         p, ul {
             padding-bottom: 2rem;
+            font-size: 1.6rem;
         }
         h1 {
             font-family: ${theme.allura};

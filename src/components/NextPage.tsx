@@ -36,7 +36,7 @@ export const NextPage: FunctionComponent<INextPage> = (p) => {
             initial="hidden">
             <PageIndicator activeNavItem={p.nextNavItem}></PageIndicator>
             <div className="text-wrapper">
-                <WhiteTextHighlight text="Next Chapter"></WhiteTextHighlight>
+                <WhiteTextHighlight text={`Next Chapter`}></WhiteTextHighlight>
                 <Link to={p.nextNavItem.url} onClick={() => p.setActiveNavItem(p.nextNavItem)}>
                     <h1>{p.nextNavItem.title}</h1>
                     <div className="image-wrapper" >
@@ -53,7 +53,7 @@ const StyledNextPage = styled(motion.div)`
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 10rem;
+    padding-top: 20rem;
     font-size: ${theme.text};
     font-family: ${theme.montserrat};
     position: relative;
@@ -67,7 +67,7 @@ const StyledNextPage = styled(motion.div)`
         transition: all 0.33s ease;
 
         h1 {
-            font-size: ${theme.subHeader};
+            font-size: ${theme.text};
             font-weight: 400;
             transition: all 0.33s ease;             
             &:hover {
@@ -80,7 +80,7 @@ const StyledNextPage = styled(motion.div)`
         }
 
         a {
-            width: fit-content;
+            width: max-content;
         }
 
     }

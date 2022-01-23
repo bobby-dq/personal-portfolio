@@ -2,7 +2,6 @@
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { INavItem } from '../data/navbarData';
-import { Link } from 'react-router-dom';
 import { motion, AnimationControls } from 'framer-motion';
 
 // Styles
@@ -41,12 +40,7 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
                     but feel free to skip ahead, each chapter are
                     independent of each other, so click any of the links in the side bar or nav-bar. 
                 </p>
-                {/* <ul>
-                    <li><Link to="/about">+ Chapter 01: About</Link></li>
-                    <li><Link to="/works">+ Chapter 02: Works</Link></li>
-                    <li><Link to="/contact">+ Chapter 03: Contact</Link></li>
-                    <li><Link to="/resume">+ Epilogue: Resume</Link></li>
-                </ul> */}
+            
                 <h1>Bobby Quilacio</h1>
             </div>
         </StyledPrologue>

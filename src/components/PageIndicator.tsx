@@ -18,7 +18,7 @@ export const PageIndicator: FunctionComponent<IPageIndicator> = (p) => {
                 <img src={p.activeNavItem.icon} alt={p.activeNavItem.title} />
             </div>
             <div className="text-wrapper">
-                <h1>// {p.activeNavItem.chapter.toUpperCase()}</h1>
+                <h1>{`// ${p.activeNavItem.chapter.toUpperCase()}`}</h1>
             </div>
             
         </StyledPageIndicator>

@@ -101,7 +101,7 @@ const StyledChapterThree = styled(motion.div)`
         }
 
         input, textarea {
-            font-size: ${theme.text};
+            font-size: 1.6rem;
             padding: 1rem;
             font-family: ${theme.montserrat};
         }

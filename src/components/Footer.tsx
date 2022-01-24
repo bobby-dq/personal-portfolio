@@ -45,7 +45,7 @@ export const Footer: FunctionComponent = () => {
                 </a>
             </div>
             <div className="social-wrapper">
-                <p>Copyright © 2021 - Bobby Quilacio. All Rights Reserved</p>
+                <p>Copyright © 2022 - Bobby Quilacio. All Rights Reserved</p>
             </div>
         </StyledFooter>
         
@@ -82,9 +82,14 @@ const StyledFooter = styled.div`
         }
         p {
             margin-left: 3rem;
-            font-size: 2.4rem;
 
         }
+
+
+    }
+    p {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
     }
 `;
 

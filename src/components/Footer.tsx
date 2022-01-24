@@ -82,7 +82,7 @@ const StyledFooter = styled.div`
         }
         p {
             margin-left: 3rem;
-            
+            font-size: 2.4rem;
 
         }
     }

@@ -31,15 +31,15 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
             <div className="content">
                 <p>
                     Thank you for visiting my portfolio. A brief intro about me, 
-                    I am a full stack developer that focuses on ASP.NET
-                    and React / Typescript - but I will expand more on that in the 
+                    I am a software/web developer, founder of a web studio, and currently a Computing Science student at the University of Alberta - but I will expand more on that in the 
                     following chapters. 
                 </p>
                 <p>
                     This portfolio is meant to be navigated like a book 
                     but feel free to skip ahead, each chapter are
-                    independent of each other, so click any of the links in the side bar or nav-bar. 
+                    independent of each other, so click any of the links in the side bar or nav-bar to navigate your way around. 
                 </p>
+                <p>Again, thank you very much for visiting my portfolio.</p>
             
                 <h1>Bobby Quilacio</h1>
             </div>

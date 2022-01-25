@@ -92,7 +92,7 @@ const StyledWorkItem = styled(motion.div)`
 
     h1 {
         font-family: ${theme.playfair};
-        font-size: ${theme.subHeader};
+        font-size: 3.6rem;
         font-weight: lighter;
         padding-bottom: 2rem;
     }
@@ -111,6 +111,7 @@ const StyledWorkItem = styled(motion.div)`
 
     li {
         padding-right: 2rem;
+        font-size: 1.6rem;
     }
 
     .links {

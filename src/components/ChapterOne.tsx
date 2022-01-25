@@ -28,24 +28,24 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
             <div className="content-wrapper">
                 <div className="about-content">
                     <PageHeader title={p.activeNavItem.title}/>
-                    <p>Hi, my name is Bobby Quilacio and I am a full-stack developer.
-                    I started my web development journey on May 2020 with 
-                    Python / Django.</p>
+                    <p>Hi, my name is Bobby Quilacio and a Computing Science student at the Universty of Alberta.
+                    I started my development journey by teaching myself Python on May 2020.</p>
                     <p>I then moved on to working with  C# / ASP.NET and Typescript / React. 
-                    I also started taking on freelance projects (which are showcased
-                    in the next chapter, alongside personal projects) 
-                    to gain a better grasp of web development. </p>
-                    <p>Outside of web development, I live a somewhat mediocre lifestyle
-                    spiced with a little bit of photography and videography. When I am
-                    not creating something, I like to read books, or go to the
+                    I also started taking on freelance projects
+                    to gain a better grasp of web development. I then founded a <a href="https://www.himostudios.com" target="_blank">web studio </a> 
+                    to combine two of the things I am passionate about - development and photography. I then attended the University of Alberta on Fall 2021 to study 
+                    Computing Science. </p> 
+                    <p>Outside of school and coding,  I live a somewhat mediocre lifestyle
+                    spiced with a little bit of photography, videography, and backpacking trips. When I am
+                    not creating something, I go to the
                     gym (if and only if self-determination persists).</p>
                     <p>Here is a list of technologies/languages/libraries i work with:</p>
                     <ul>
-                        <li><WhiteTextHighlight text="C# and ASP.NET"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="TypeScript and React"></WhiteTextHighlight></li>
-                        <li><WhiteTextHighlight text="HTML and CSS"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="Javascript and Gatsby"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="Python and Django"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="TypeScript and React"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="C# and ASP.NET"></WhiteTextHighlight></li>
+                        <li><WhiteTextHighlight text="HTML and CSS"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="Bootstrap and Tailwind"></WhiteTextHighlight></li>
                     </ul>
                     <p>If you think we can create something together, don’t hesitate 
@@ -59,7 +59,7 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
 
 const StyledChapterOne = styled(motion.div)`
     display: flex;
-    min-height: 100vh;
+    min-height: 50vh;
     font-family: ${theme.montserrat};
     font-size: ${theme.text};
 

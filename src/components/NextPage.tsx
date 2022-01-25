@@ -53,7 +53,7 @@ const StyledNextPage = styled(motion.div)`
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 20rem;
+    padding-top: 2.5rem;
     font-size: ${theme.text};
     font-family: ${theme.montserrat};
     position: relative;

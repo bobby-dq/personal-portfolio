@@ -79,7 +79,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "HIMO | Web Design Studios",
-            description: "The official website of Himo Web Studios - a web studio that I founded. It uses multiple Gatsby to maximize its earch Engine Optimization, it also uses some React libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
+            description: "The official website of Himo Web Studios - a web studio that I founded. It uses Gatsby to maximize its earch Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
             liveUrl: "https://www.himostudios.com",
             technologies: ["GraphQL","TypeScript", "React", "Styled Components", "Framer Motion"],
             photo: himo

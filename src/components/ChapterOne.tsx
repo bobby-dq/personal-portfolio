@@ -32,7 +32,7 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
                     I started my development journey by teaching myself Python on May 2020.</p>
                     <p>I then moved on to working with  C# / ASP.NET and Typescript / React. 
                     I also started taking on freelance projects
-                    to gain a better grasp of web development. I then founded a <a href="https://www.himostudios.com" target="_blank">web studio </a> 
+                    to gain a better grasp of web development. I then founded a <a href="https://www.himostudios.com" rel="noreferrer" target="_blank">web studio </a> 
                     to combine two of the things I am passionate about - development and photography. I then attended the University of Alberta on Fall 2021 to study 
                     Computing Science. </p> 
                     <p>Outside of school and coding,  I live a somewhat mediocre lifestyle

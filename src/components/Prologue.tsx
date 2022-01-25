@@ -32,7 +32,7 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
                 <p>
                     Thank you for visiting my portfolio. A brief intro about me, 
                     I am a software/web developer, founder of <a href="https://www.himostudios.com" rel="noreferrer" target="_blank">HIMO | Web Studio,</a> and currently a Computing Science student at the University of Alberta - but I will expand more on that in the 
-                    following chapters. 
+                    following chapters. I am always open to new and exciting opportunities, so if you think we can create something exciting together, please don't hesitate to contact me.
                 </p>
                 <p>
                     This portfolio is meant to be navigated like a book 

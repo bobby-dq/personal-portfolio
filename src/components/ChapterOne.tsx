@@ -48,7 +48,7 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
                         <li><WhiteTextHighlight text="HTML and CSS"></WhiteTextHighlight></li>
                         <li><WhiteTextHighlight text="Bootstrap and Tailwind"></WhiteTextHighlight></li>
                     </ul>
-                    <p>If you think we can create something together, don’t hesitate 
+                    <p>I am always open to new and exciting opportunities, so if you think we can create something exciting together, please don't hesitate to 
                     to <Link to="/contact">contact</Link> me.</p>
                     
                 </div>

@@ -55,7 +55,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Möbius Plotter", 
-            description: "Assisted a USRA project by creating a .NET application to generate a Mertens Conjencture graph, utilizing the Möbius function/algorithm. If Merten's Conjecture is proven to be true, it would be imply that Riemann's Hypothesis is also true - one of the famous unsolved mathematical phenomenons. The Möbius function takes a natural number and outputs 0 if it has repeated prime factors, 1 if it has an even number of non-repeated prime factors, and -1 if it has an odd number of non-repeated prime factors.",
+            description: "Assisted a USRA project by creating a .NET application to generate a Merten's Conjencture graph, utilizing the Möbius function/algorithm. If Merten's Conjecture is proven to be true, it would be imply that Riemann's Hypothesis is also true - one of the famous unsolved mathematical phenomenons. The Möbius function takes a natural number and outputs 0 if it has repeated prime factors, 1 if it has an even number of non-repeated prime factors, and -1 if it has an odd number of non-repeated prime factors.",
             githubRepo: "https://github.com/bobby-dq/MoebiusPlotter",
             technologies: ["C#", ".NET", "ScottPlot"],
             photo: moebiusPlotter
@@ -65,7 +65,7 @@ export const generateWorkData: () => IWork[] = () => {
             title: "Team Galo BJJ",
             description: "The official website of Team Galo BJJ - a local Brazilian Jiu Jitsu gym in Edmonton. Created using GatsbyJS to maximize Search Engine Optimization, it also uses React tools and libraries such as React Router, Sass, Framer Motion, and GraphQL.",
             liveUrl: "https://teamgalobjj.ca/",
-            technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass"],
+            technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass", "Framer Motion"],
             photo: teamGalo
         },
         {
@@ -81,7 +81,7 @@ export const generateWorkData: () => IWork[] = () => {
             title: "HIMO | Web Studio",
             description: "The official website of HIMO | Web Studio - a web studio that I founded. It uses Gatsby to maximize its earch Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
             liveUrl: "https://www.himostudios.com",
-            technologies: ["GraphQL","TypeScript", "React", "Styled Components", "Framer Motion"],
+            technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass", "Framer Motion"],
             photo: himo
         },
         {

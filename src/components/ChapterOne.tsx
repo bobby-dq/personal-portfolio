@@ -28,12 +28,12 @@ export const ChapterOne: FunctionComponent<IChapterOne> = (p) => {
             <div className="content-wrapper">
                 <div className="about-content">
                     <PageHeader title={p.activeNavItem.title}/>
-                    <p>Hi, my name is Bobby Quilacio and a Computing Science student at the University of Alberta.
+                    <p>Hi, my name is Bobby Quilacio, a Computing Science student at the University of Alberta.
                     I started my development journey by teaching myself Python on May 2020.</p>
                     <p>I then moved on to working with  C# / ASP.NET and Typescript / React. 
                     I also started taking on freelance projects
-                    to gain a better grasp of web development. I then founded a <a href="https://www.himostudios.com" rel="noreferrer" target="_blank">web studio </a> 
-                    to combine two of the things I am passionate about - development and photography. I then attended the University of Alberta on Fall 2021 to study 
+                    to gain a better grasp of web development. I then founded <a href="https://www.himostudios.com" rel="noreferrer" target="_blank">HIMO | Web Studio</a> 
+                    , to combine two of the things I am passionate about - development and photography. I then attended the University of Alberta on Fall 2021 to study 
                     Computing Science. </p> 
                     <p>Outside of school and coding,  I live a somewhat mediocre lifestyle
                     spiced with a little bit of photography, videography, and backpacking trips. When I am

@@ -38,7 +38,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Budgeting App (Django)",
-            description: "Personal Budgeting App is a CRUD Application built using Django using the Bootsrap library for styling.",
+            description: "Personal Budgeting App is a CRUD Application built using Django and Bootsrap library for styling.",
             liveUrl: "https://personalbudgeting.herokuapp.com/",
             githubRepo: "https://github.com/bobby-dq/personal-budgeting-app",
             technologies: ["Python", "Django","Bootstrap"],
@@ -71,15 +71,15 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Bonterra Built",
-            description: "The official website of Bonterra Buil - a local homebuilder in Edmonton. Created using GatsbyJS to maximize Search Engine Optimization, it also uses React tools and libraries such as React Router, Sass, Framer Motion, and GraphQL.",
+            description: "The official website of Bonterra Built - a local homebuilder in Edmonton. Created using GatsbyJS to maximize Search Engine Optimization, it also uses React tools and libraries such as React Router, Sass, Framer Motion, and GraphQL.",
             liveUrl: "https://www.bonterrabuilt.ca/",
             technologies: ["GraphQL","React", "Gatsby", "SASS", "JavaScript"],
             photo: bonterraBuilt
         },
         {
             id: uuidv4(),
-            title: "HIMO | Web Design Studios",
-            description: "The official website of Himo Web Studios - a web studio that I founded. It uses Gatsby to maximize its earch Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
+            title: "HIMO | Web Studio",
+            description: "The official website of HIMO | Web Studio - a web studio that I founded. It uses Gatsby to maximize its earch Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
             liveUrl: "https://www.himostudios.com",
             technologies: ["GraphQL","TypeScript", "React", "Styled Components", "Framer Motion"],
             photo: himo

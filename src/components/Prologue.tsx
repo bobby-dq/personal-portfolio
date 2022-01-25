@@ -31,7 +31,7 @@ export const Prologue: FunctionComponent<IPrologue> = (p) => {
             <div className="content">
                 <p>
                     Thank you for visiting my portfolio. A brief intro about me, 
-                    I am a software/web developer, founder of a web studio, and currently a Computing Science student at the University of Alberta - but I will expand more on that in the 
+                    I am a software/web developer, founder of <a href="https://www.himostudios.com" rel="noreferrer" target="_blank">HIMO | Web Studio,</a> and currently a Computing Science student at the University of Alberta - but I will expand more on that in the 
                     following chapters. 
                 </p>
                 <p>

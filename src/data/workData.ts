@@ -30,7 +30,7 @@ export const generateWorkData: () => IWork[] = () => {
             id: uuidv4(),
             title: "Budgeting App (ASP.NET)",
             description: "Budgeting App is a ASP.NET Core MVC App that helps you track your personal finances, budgets, and expenses. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
-            liveUrl: "https://budgetingapp.azurewebsites.net/",
+            // liveUrl: "https://budgetingapp.azurewebsites.net/",
             githubRepo: "https://github.com/bobby-dq/BudgetingApp",
             technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
             photo: aspBudgeting

@@ -63,8 +63,8 @@ const StyledPrologue = styled(motion.div)`
             font-size: 1.6rem;
         }
         h1 {
-            font-family: ${theme.allura};
-            font-weight: lighter;
+            font-family: ${theme.montserrat};
+            font-size: 1.6rem
 
         }
         a {

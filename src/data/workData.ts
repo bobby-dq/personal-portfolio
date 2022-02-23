@@ -27,6 +27,41 @@ export const generateWorkData: () => IWork[] = () => {
 
     return [
         
+        
+        {
+            id: uuidv4(),
+            title: "HIMO | Web Studio",
+            description: "The official website of HIMO | Web Studio - a web studio that I founded. It uses Gatsby to maximize its earch Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
+            liveUrl: "https://www.himostudios.com",
+            technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass", "Framer Motion"],
+            photo: himo
+        },
+        {
+            id: uuidv4(),
+            title: "Baby Tracker",
+            description: "Baby Tracker is a ASP.NET Core MVC App track your newborn's eating, sleeping habits, medication, and growth. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
+            githubRepo: "https://github.com/bobby-dq/BabyTracker",
+            technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
+            photo: babyTracker
+        },
+        {
+            id: uuidv4(),
+            title: "Budgeting App (Django)",
+            description: "Personal Budgeting App is a CRUD Application built using Django and Bootsrap library for styling.",
+            liveUrl: "https://personalbudgeting.herokuapp.com/",
+            githubRepo: "https://github.com/bobby-dq/personal-budgeting-app",
+            technologies: ["Python", "Django","Bootstrap"],
+            photo: djangoBudgeting
+        },
+        {
+            id: uuidv4(),
+            title: "Budgeting App (ASP.NET)",
+            description: "Budgeting App is a ASP.NET Core MVC App that helps you track your personal finances, budgets, and expenses. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
+            // liveUrl: "https://budgetingapp.azurewebsites.net/",
+            githubRepo: "https://github.com/bobby-dq/BudgetingApp",
+            technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
+            photo: aspBudgeting
+        },
         {
             id: uuidv4(),
             title: "Sudoku Backtracker",
@@ -61,32 +96,6 @@ export const generateWorkData: () => IWork[] = () => {
         },
         {
             id: uuidv4(),
-            title: "HIMO | Web Studio",
-            description: "The official website of HIMO | Web Studio - a web studio that I founded. It uses Gatsby to maximize its earch Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
-            liveUrl: "https://www.himostudios.com",
-            technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass", "Framer Motion"],
-            photo: himo
-        },
-        {
-            id: uuidv4(),
-            title: "Budgeting App (ASP.NET)",
-            description: "Budgeting App is a ASP.NET Core MVC App that helps you track your personal finances, budgets, and expenses. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
-            // liveUrl: "https://budgetingapp.azurewebsites.net/",
-            githubRepo: "https://github.com/bobby-dq/BudgetingApp",
-            technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
-            photo: aspBudgeting
-        },
-        {
-            id: uuidv4(),
-            title: "Budgeting App (Django)",
-            description: "Personal Budgeting App is a CRUD Application built using Django and Bootsrap library for styling.",
-            liveUrl: "https://personalbudgeting.herokuapp.com/",
-            githubRepo: "https://github.com/bobby-dq/personal-budgeting-app",
-            technologies: ["Python", "Django","Bootstrap"],
-            photo: djangoBudgeting
-        },
-        {
-            id: uuidv4(),
             title: "Personal Portfolio",
             description: "My personal portfolio is built using React and React Libraries such as Styled Components.",
             liveUrl: "/",
@@ -94,7 +103,6 @@ export const generateWorkData: () => IWork[] = () => {
             technologies: ["TypeScript", "React", "Styled Components", "Framer Motion", ],
             photo: personalPortfolio
         },
-        
         {
             id: uuidv4(),
             title: "MoonCake",
@@ -103,17 +111,6 @@ export const generateWorkData: () => IWork[] = () => {
             technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass"],
             photo: moonCake
         },
-
-        {
-            id: uuidv4(),
-            title: "Baby Tracker",
-            description: "Baby Tracker is a ASP.NET Core MVC App track your newborn's eating, sleeping habits, medication, and growth. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
-            githubRepo: "https://github.com/bobby-dq/BabyTracker",
-            technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
-            photo: babyTracker
-        },
-        
-        
         
     ]
 }

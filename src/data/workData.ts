@@ -31,7 +31,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "HIMO | Web Studio",
-            description: "The official website of HIMO | Web Studio - a web studio that I founded. It uses Gatsby to maximize its earch Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
+            description: "The official website of HIMO | Web Studio - a web studio that I founded. It uses Gatsby to maximize its Search Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
             liveUrl: "https://www.himostudios.com",
             technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass", "Framer Motion"],
             photo: himo
@@ -39,7 +39,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Baby Tracker",
-            description: "Baby Tracker is a ASP.NET Core MVC App track your newborn's eating, sleeping habits, medication, and growth. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
+            description: "Baby Tracker is a ASP.NET Core MVC App to help you track your newborn's eating, sleeping habits, medication, and growth. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
             githubRepo: "https://github.com/bobby-dq/BabyTracker",
             technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
             photo: babyTracker
@@ -47,7 +47,7 @@ export const generateWorkData: () => IWork[] = () => {
         {
             id: uuidv4(),
             title: "Budgeting App (Django)",
-            description: "Personal Budgeting App is a CRUD Application built using Django and Bootsrap library for styling.",
+            description: "Budgeting App is a web application built using Django that helps you track your personal finances, budgets, and expenses. Utilized Django Object Relational Mapper to interact with SQLite3 database and implemented Bootstrap for styling.",
             liveUrl: "https://personalbudgeting.herokuapp.com/",
             githubRepo: "https://github.com/bobby-dq/personal-budgeting-app",
             technologies: ["Python", "Django","Bootstrap"],

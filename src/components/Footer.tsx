@@ -22,30 +22,24 @@ export const Footer: FunctionComponent = () => {
             </div>
             <div className="social-wrapper">
                 <a href="https://github.com/bobby-dq" target="_blank" rel="noreferrer" className="social">
-                    <Github size="3rem" color="red" />
+                    <Github size="2rem" color="red" />
                     <p>bobby-dq</p>
                 </a>
             </div>
             <div className="social-wrapper">
                 <a href="https://www.linkedin.com/in/quilaciob/" target="_blank" rel="noreferrer" className="social">
-                    <Linkedin size="3rem" color="red" />
+                    <Linkedin size="2rem" color="red" />
                     <p>Bob Joshua Quilacio</p>
                 </a>
             </div>
             <div className="social-wrapper">
                 <a href="mailto: josh.quilacio@gmail.com" target="_blank" rel="noreferrer" className="social">
-                    <Email size="3rem" color="red" />
+                    <Email size="2rem" color="red" />
                     <p>josh.quilacio@gmail.com</p>
                 </a>
             </div>
-            <div className="social-wrapper">
-                <a href="https://discord.com/login" target="_blank" rel="noreferrer" className="social">
-                    <Discord size="3rem" color="red" />
-                    <p>bc0ii#4842</p>
-                </a>
-            </div>
-            <div className="social-wrapper">
-                <p>Copyright © 2022 - Bobby Quilacio. All Rights Reserved</p>
+            <div className="social-wrapper copyright">
+                <p>Copyright © {new Date().getFullYear()} - Bobby Quilacio. All Rights Reserved</p>
             </div>
         </StyledFooter>
         
@@ -72,7 +66,6 @@ const StyledFooter = styled.div`
         font-family: ${theme.montserrat};
         font-size: ${theme.text};  
         display: flex;
-        margin-bottom: 2rem;
         align-items: center;
         transition: all 0.33s ease;
         cursor: pointer;
@@ -81,14 +74,19 @@ const StyledFooter = styled.div`
             color: red;
         }
         p {
+            padding-top: 1rem;
             margin-left: 3rem;
-
         }
 
 
     }
+
+    .copyright {
+        margin-top: 2rem;
+    }
+
     p {
-        font-size: 2.4rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
     }
 `;

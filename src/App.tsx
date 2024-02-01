@@ -92,14 +92,14 @@ function App() {
 								nextNavItem={navbarData[1]}
 							/>}
 						/>
-						<Route exact path="/about" 
+						<Route exact path="/work" 
 							component={ () => <AboutPage 
 								activeNavItem={activeNavItem}
 								setActiveNavItem={setActiveNavItem}
 								nextNavItem={navbarData[2]}
 							/>}
 						/>
-						<Route exact path="/works" 
+						<Route exact path="/projects" 
 							component={ () => <WorksPage 
 								activeNavItem={activeNavItem}
 								setActiveNavItem={setActiveNavItem}
@@ -110,7 +110,7 @@ function App() {
 							component={ () => <ContactPage 
 								activeNavItem={activeNavItem}
 								setActiveNavItem={setActiveNavItem}
-								nextNavItem={navbarData[4]}
+								nextNavItem={navbarData[0]}
 							/>}
 						/>
 						<Route exact path="/resume" 

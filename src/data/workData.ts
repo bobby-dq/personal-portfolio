@@ -30,6 +30,15 @@ export const generateWorkData: () => IWork[] = () => {
         
         {
             id: uuidv4(),
+            title: "Budgeting App (ASP.NET)",
+            description: "Budgeting App is a ASP.NET Core MVC App that helps you track your personal finances, budgets, and expenses. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
+            liveUrl: "http://budgets.bobbyquilacio.com:8088/",
+            githubRepo: "https://github.com/bobby-dq/BudgetingApp",
+            technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
+            photo: aspBudgeting
+        },
+        {
+            id: uuidv4(),
             title: "HIMO | Web Studio",
             description: "The official website of HIMO | Web Studio - a web studio that I founded. It uses Gatsby to maximize its Search Engine Optimization and multiple react libraries such as React Router, Styled Components, Framer Motion, and GraphQL.",
             liveUrl: "https://www.himostudios.com",
@@ -38,11 +47,11 @@ export const generateWorkData: () => IWork[] = () => {
         },
         {
             id: uuidv4(),
-            title: "Baby Tracker",
-            description: "Baby Tracker is a ASP.NET Core MVC App to help you track your newborn's eating, sleeping habits, medication, and growth. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
-            githubRepo: "https://github.com/bobby-dq/BabyTracker",
-            technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
-            photo: babyTracker
+            title: "Team Galo BJJ",
+            description: "The official website of Team Galo BJJ - a local Brazilian Jiu Jitsu gym in Edmonton. Created using GatsbyJS to maximize Search Engine Optimization, it also uses React tools and libraries such as React Router, Sass, Framer Motion, and GraphQL.",
+            liveUrl: "https://teamgalobjj.ca/",
+            technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass", "Framer Motion"],
+            photo: teamGalo
         },
         {
             id: uuidv4(),
@@ -55,12 +64,11 @@ export const generateWorkData: () => IWork[] = () => {
         },
         {
             id: uuidv4(),
-            title: "Budgeting App (ASP.NET)",
-            description: "Budgeting App is a ASP.NET Core MVC App that helps you track your personal finances, budgets, and expenses. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
-            // liveUrl: "https://budgetingapp.azurewebsites.net/",
-            githubRepo: "https://github.com/bobby-dq/BudgetingApp",
+            title: "Baby Tracker",
+            description: "Baby Tracker is a ASP.NET Core MVC App to help you track your newborn's eating, sleeping habits, medication, and growth. It uses EF Core and SQL Server to manage the database and Tailwind CSS for styling. Authentication and Authorization is managed using ASP.NET Identity.",
+            githubRepo: "https://github.com/bobby-dq/BabyTracker",
             technologies: ["C#", "ASP.NET", "SQL Server", "Tailwind", "EF Core", ],
-            photo: aspBudgeting
+            photo: babyTracker
         },
         {
             id: uuidv4(),
@@ -77,14 +85,6 @@ export const generateWorkData: () => IWork[] = () => {
             githubRepo: "https://github.com/bobby-dq/MoebiusPlotter",
             technologies: ["C#", ".NET", "ScottPlot"],
             photo: moebiusPlotter
-        },
-        {
-            id: uuidv4(),
-            title: "Team Galo BJJ",
-            description: "The official website of Team Galo BJJ - a local Brazilian Jiu Jitsu gym in Edmonton. Created using GatsbyJS to maximize Search Engine Optimization, it also uses React tools and libraries such as React Router, Sass, Framer Motion, and GraphQL.",
-            liveUrl: "https://teamgalobjj.ca/",
-            technologies: ["GraphQL","JavaScript", "Gatsby", "React", "Sass", "Framer Motion"],
-            photo: teamGalo
         },
         {
             id: uuidv4(),

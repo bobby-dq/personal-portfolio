@@ -56,6 +56,7 @@ const StyledSlidingMenu = styled.div`
     background: ${theme.dirtyWhite};
     position: sticky;
     top: 0px;
+    justify-content: space-between;
 
     .item-wrapper {
         padding-left: 10rem;

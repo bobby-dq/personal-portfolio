@@ -21,7 +21,8 @@ export const Hero: FunctionComponent = () => {
                 <div className="text text2"><motion.h1 variants={heroTextAnimation}>Bobby</motion.h1></div>
                 <div className="text text2"><motion.h1 variants={heroTextAnimation}>Quilacio</motion.h1></div>
                 <div className="text text3"><motion.p variants={heroTextAnimation}>and I am a</motion.p></div>
-                <div className="text text4"><motion.h1 variants={heroTextAnimation}>Developer</motion.h1></div>
+                <div className="text text4"><motion.h1 variants={heroTextAnimation}>Computer</motion.h1></div>
+                <div className="text text5"><motion.h1 variants={heroTextAnimation}>Scientist</motion.h1></div>
             </motion.div>
         </StyledHero>
     );

@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import aboutIcon from '../images/navIcons/aboutIcon.png';
 import worksIcon from '../images/navIcons/worksIcon.png';
 import contactIcon from '../images/navIcons/contactIcon.png';
-import resumeIcon from '../images/navIcons/resumeIcon.png';
+import expIcon from '../images/navIcons/expIcon.png';
 import prologueIcon from '../images/navIcons/prologueIcon.png';
 
 export interface INavItem {
@@ -38,49 +38,49 @@ export const generateNavbarData:() => INavItem[] = () => {
             subTitleOne: "A brief",
             subTitleTwo: "context",
             index: "00",
-            icon: prologueIcon,
+            icon: aboutIcon,
             chapter:"Prologue",
             url: "/"
         },
         {
             id: uuidv4(),
-            title: "ABOUT",
-            subTitleOne: "A bit of an",
-            subTitleTwo: "introduction",
+            title: "WORK",
+            subTitleOne: "A professional",
+            subTitleTwo: "summary",
             index: "01",
-            icon: aboutIcon,
+            icon: expIcon,
             chapter:"Chapter 01",
-            url: "/about"
+            url: "/work"
         },
         {
             id: uuidv4(),
-            title: "WORKS",
+            title: "PROJECTS",
             subTitleOne: "A quick",
             subTitleTwo: "show-and-tell",
             index: "02",
             icon: worksIcon,
             chapter:"Chapter 02",
-            url: "/works"
+            url: "/projects"
         },
         {
             id: uuidv4(),
             title: "CONTACT",
             subTitleOne: "A short",
-            subTitleTwo: "message to me",
+            subTitleTwo: "message",
             index: "03",
             icon: contactIcon,
-            chapter:"Chapter 03",
+            chapter:"Epilogue",
             url: "/contact"
         },
-        {
-            id: uuidv4(),
-            title: "RESUME",
-            subTitleOne: "A professional",
-            subTitleTwo: "summary",
-            chapter: "Epilogue",
-            index: "04",
-            icon: resumeIcon,
-            url: "/resume"
-        },
+        // {
+        //     id: uuidv4(),
+        //     title: "RESUME",
+        //     subTitleOne: "A professional",
+        //     subTitleTwo: "summary",
+        //     chapter: "Epilogue",
+        //     index: "04",
+        //     icon: resumeIcon,
+        //     url: "/resume"
+        // },
     ]
 }
